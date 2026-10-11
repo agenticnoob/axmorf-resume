@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "f763d2f6a1fc3e6b9e6fd8f010224984cd644c36",
-    "generatedAt": "2026-10-11T00:07:26.210203+09:00"
+    "revision": "12b3f217db58f7d7de1b0f347fe3e00a0c3e20fb",
+    "generatedAt": "2026-10-12T00:06:13.316774+09:00"
   },
   "skills": [
     {
@@ -586,10 +586,10 @@
       "id": "eslint",
       "name": "ESLint",
       "category": "tool",
-      "dayCount": 25,
-      "totalCount": 78,
+      "dayCount": 26,
+      "totalCount": 79,
       "firstSeen": "2026-06-07",
-      "lastSeen": "2026-09-18"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "excel",
@@ -640,10 +640,10 @@
       "id": "ffmpeg",
       "name": "FFmpeg",
       "category": "tool",
-      "dayCount": 47,
-      "totalCount": 151,
+      "dayCount": 48,
+      "totalCount": 152,
       "firstSeen": "2026-06-26",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "ffprobe",
@@ -694,10 +694,10 @@
       "id": "git",
       "name": "Git",
       "category": "vcs",
-      "dayCount": 97,
-      "totalCount": 471,
+      "dayCount": 98,
+      "totalCount": 474,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "github",
@@ -712,10 +712,10 @@
       "id": "githubactions",
       "name": "GitHub Actions",
       "category": "tool",
-      "dayCount": 26,
-      "totalCount": 121,
+      "dayCount": 27,
+      "totalCount": 123,
       "firstSeen": "2026-06-10",
-      "lastSeen": "2026-10-09"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "githubapi",
@@ -982,10 +982,10 @@
       "id": "http",
       "name": "HTTP",
       "category": "protocol",
-      "dayCount": 4,
-      "totalCount": 9,
+      "dayCount": 5,
+      "totalCount": 11,
       "firstSeen": "2026-09-03",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "huggingface",
@@ -1123,6 +1123,15 @@
       "lastSeen": "2026-10-02"
     },
     {
+      "id": "llmstxt",
+      "name": "llms.txt",
+      "category": "format",
+      "dayCount": 1,
+      "totalCount": 2,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
       "id": "lufs",
       "name": "LUFS",
       "category": "domain",
@@ -1153,10 +1162,10 @@
       "id": "markdown",
       "name": "Markdown",
       "category": "format",
-      "dayCount": 13,
-      "totalCount": 45,
+      "dayCount": 14,
+      "totalCount": 48,
       "firstSeen": "2026-07-23",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "mcp",
@@ -1279,10 +1288,10 @@
       "id": "nextjs",
       "name": "Next.js",
       "category": "framework",
-      "dayCount": 35,
-      "totalCount": 130,
+      "dayCount": 36,
+      "totalCount": 134,
       "firstSeen": "2026-05-26",
-      "lastSeen": "2026-09-23"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "nginx",
@@ -1297,19 +1306,19 @@
       "id": "nodejs",
       "name": "Node.js",
       "category": "runtime",
-      "dayCount": 83,
-      "totalCount": 393,
+      "dayCount": 84,
+      "totalCount": 396,
       "firstSeen": "2026-05-18",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "npm",
       "name": "npm",
       "category": "package-manager",
-      "dayCount": 92,
-      "totalCount": 509,
+      "dayCount": 93,
+      "totalCount": 511,
       "firstSeen": "2026-06-05",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "numpy",
@@ -1567,10 +1576,10 @@
       "id": "prettier",
       "name": "Prettier",
       "category": "tool",
-      "dayCount": 27,
-      "totalCount": 74,
+      "dayCount": 28,
+      "totalCount": 75,
       "firstSeen": "2026-06-17",
-      "lastSeen": "2026-09-21"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "puppeteer",
@@ -1693,10 +1702,10 @@
       "id": "react",
       "name": "React",
       "category": "framework",
-      "dayCount": 82,
-      "totalCount": 465,
+      "dayCount": 83,
+      "totalCount": 468,
       "firstSeen": "2026-05-20",
-      "lastSeen": "2026-10-09"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "reactdoctor",
@@ -1742,6 +1751,15 @@
       "totalCount": 3,
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-09-20"
+    },
+    {
+      "id": "robotstxt",
+      "name": "robots.txt",
+      "category": "format",
+      "dayCount": 1,
+      "totalCount": 1,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "rsp",
@@ -1886,6 +1904,15 @@
       "totalCount": 1,
       "firstSeen": "2026-07-29",
       "lastSeen": "2026-07-29"
+    },
+    {
+      "id": "sitemap",
+      "name": "Sitemap",
+      "category": "format",
+      "dayCount": 1,
+      "totalCount": 2,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "sketchfab",
@@ -2035,10 +2062,10 @@
       "id": "threejs",
       "name": "Three.js",
       "category": "library",
-      "dayCount": 44,
-      "totalCount": 219,
+      "dayCount": 45,
+      "totalCount": 220,
       "firstSeen": "2026-06-04",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "tinyhttp",
@@ -2089,10 +2116,10 @@
       "id": "typescript",
       "name": "TypeScript",
       "category": "language",
-      "dayCount": 126,
-      "totalCount": 1013,
+      "dayCount": 127,
+      "totalCount": 1017,
       "firstSeen": "2026-05-17",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "ubuntu",
@@ -2161,10 +2188,10 @@
       "id": "vercel",
       "name": "Vercel",
       "category": "cloud",
-      "dayCount": 16,
-      "totalCount": 56,
+      "dayCount": 17,
+      "totalCount": 58,
       "firstSeen": "2026-06-29",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-10-11"
     },
     {
       "id": "viseloradomwebgl",
