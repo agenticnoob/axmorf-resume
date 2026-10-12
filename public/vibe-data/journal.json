@@ -2,10 +2,77 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "12b3f217db58f7d7de1b0f347fe3e00a0c3e20fb",
-    "generatedAt": "2026-10-12T00:06:13.316774+09:00"
+    "revision": "20c7496c04b834a3d92c745287fc636b2b0735a3",
+    "generatedAt": "2026-10-13T00:06:27.640676+09:00"
   },
   "entries": [
+    {
+      "date": "2026-10-12",
+      "sessionCount": 5,
+      "turnCount": 33,
+      "skillsTouched": [
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 4
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "category": "runtime",
+          "count": 2
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 2
+        },
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 2
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 2
+        },
+        {
+          "id": "zsh",
+          "name": "Zsh",
+          "category": "shell",
+          "count": 1
+        },
+        {
+          "id": "json",
+          "name": "JSON",
+          "category": "format",
+          "count": 1
+        }
+      ],
+      "timelineEvent": "AXMORF Studio 工作空间从 0.1.20 升级到 0.1.21 并通过 doctor 与 16 个 Composition 编译验证；同时移除了本地五首循环曲目白名单，改按新版指南使用原创代码配乐。",
+      "tools": [
+        "npm（安装、bootstrap、doctor、ls 校验）",
+        "Node.js 运行时",
+        "React 与 Remotion（保持官方固定配套版本）",
+        "Git（分支同步与快进更新）",
+        "zsh（本地命令行操作）",
+        "JSON（升级报告与配置）"
+      ],
+      "work": [
+        "AXMORF Studio 工作空间升级：核对 npm registry 确认 @axmorf/studio 与 create-axmorf-studio 的 latest 均为 0.1.21（当日发布）。在工作空间根目录执行 npm install --save-exact @axmorf/studio@0.1.21、npm run bootstrap、npm run doctor、npm ls @axmorf/studio --depth=0。主包从 0.1.20 升级到 0.1.21，同步 lockfile 与本地指南，React、Remotion 等保持官方固定版本。bootstrap 报告共享素材清单与新版冲突，核对后确认清单与官方 0.1.20 文件一致，备份后由新版 bootstrap 重新生成，资源同步通过。doctor 通过（含真实浏览器渲染），全部 16 个 Composition 编译通过，核对 1,941 个项目、素材、交付及配置文件均未变。升级报告保存于 npm-upgrade-20261012/upgrade-report.json。",
+        "未解决问题：最新作品的完整校验未通过，原因是新版共享 Catalog 新增五首音乐导致清单校验和变化，使旧项目记录的资源指纹过期；成片与快照检查通过，但完整项目校验需后续通过正式生产流程重建验证。",
+        "axmorf-studio 仓库代码同步：在 ~/AgentWorkspace/projects/axmorf-studio 的分支 axmorf/npm-workspace-open-source 上快进更新 46329da → 008fae4，工作区干净，与远端同步。",
+        "制作流程说明：确认本地工作空间已升级到 0.1.21，41 个 Skill 文件与同版本官方模板逐字一致，创作手册、参考片学习方法、剪纸案例和教学源码均已同步。梳理六步制作流程：整片设计（filmPlan 与场景 brief）、按内容组织场景（初态→动作→结果）、确定音画时序、检查成本后分工制作（默认最多四个子 Agent）、真实预览并修正、渲染并验证交付。关键参考文件包括 film-direction.md、creative-playbook.md、paper-collage.md、examples/README.md。",
+        "规则修改：移除本地『五首已批准循环曲目』规则，改按新版指南制作。找到两处限制——AGENTS.md 覆盖了新版配乐指南，私有配置保存了五首曲目白名单——已删除这些限制并同步 README 旧说明。修改后新片按最新手册设计画面与节奏，默认代码合成原创配乐；原音乐文件、已有项目和成片均保留。验证 doctor 六项检查通过，41 个 Skill 文件与新版模板一致。",
+        "视频制作请求（进行中）：用户要求制作主题为近两周热门 AI 开源项目的视频，无口播，用音乐节奏和 Vox 剪纸风格。助手确认将使用 axmorf-video 流程，按无口播、短文字和剪纸图形设计，内容聚焦近两周有明确热度证据的项目，不把老项目写成新发布。该制作任务尚未完成，会话在此处结束。"
+      ],
+      "resumeHighlight": "主导 AXMORF Studio 工作空间从 0.1.20 到 0.1.21 的依赖升级：核对 npm registry 版本、执行 install/bootstrap/doctor 全流程、处理共享素材清单冲突、通过 16 个 Composition 编译与真实浏览器渲染验证，并核对 1,941 个项目与配置文件未受影响；同时移除本地配乐白名单规则，改按新版指南使用原创代码合成配乐，保证 41 个 Skill 文件与官方模板逐字一致。"
+    },
     {
       "date": "2026-10-11",
       "sessionCount": 2,
