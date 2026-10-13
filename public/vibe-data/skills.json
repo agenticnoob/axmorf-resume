@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "20c7496c04b834a3d92c745287fc636b2b0735a3",
-    "generatedAt": "2026-10-13T00:06:27.640676+09:00"
+    "revision": "655d522639f30258abaf2fb520723ff294ae1d27",
+    "generatedAt": "2026-10-14T00:10:41.991944+09:00"
   },
   "skills": [
     {
@@ -37,10 +37,10 @@
       "id": "aac",
       "name": "AAC",
       "category": "format",
-      "dayCount": 15,
-      "totalCount": 30,
+      "dayCount": 16,
+      "totalCount": 33,
       "firstSeen": "2026-07-09",
-      "lastSeen": "2026-10-09"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "actionlint",
@@ -151,6 +151,15 @@
       "lastSeen": "2026-08-05"
     },
     {
+      "id": "atlascloud",
+      "name": "Atlas Cloud",
+      "category": "ai-provider",
+      "dayCount": 1,
+      "totalCount": 1,
+      "firstSeen": "2026-10-13",
+      "lastSeen": "2026-10-13"
+    },
+    {
       "id": "axmorfvideo",
       "name": "axmorf-video",
       "category": "ai-coding-tool",
@@ -172,10 +181,10 @@
       "id": "bash",
       "name": "Bash",
       "category": "shell",
-      "dayCount": 32,
-      "totalCount": 197,
+      "dayCount": 33,
+      "totalCount": 199,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "bilibili",
@@ -235,10 +244,10 @@
       "id": "chatgpt",
       "name": "ChatGPT",
       "category": "ai-model",
-      "dayCount": 3,
-      "totalCount": 4,
+      "dayCount": 4,
+      "totalCount": 5,
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "chrome",
@@ -343,10 +352,10 @@
       "id": "codex",
       "name": "Codex CLI",
       "category": "ai-coding-tool",
-      "dayCount": 36,
-      "totalCount": 211,
+      "dayCount": 37,
+      "totalCount": 212,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "comfyui",
@@ -523,10 +532,10 @@
       "id": "edgetts",
       "name": "Edge TTS",
       "category": "ai-provider",
-      "dayCount": 3,
-      "totalCount": 4,
+      "dayCount": 4,
+      "totalCount": 8,
       "firstSeen": "2026-08-24",
-      "lastSeen": "2026-09-10"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "editorconfig",
@@ -586,10 +595,10 @@
       "id": "eslint",
       "name": "ESLint",
       "category": "tool",
-      "dayCount": 26,
-      "totalCount": 79,
+      "dayCount": 27,
+      "totalCount": 81,
       "firstSeen": "2026-06-07",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "excel",
@@ -640,19 +649,19 @@
       "id": "ffmpeg",
       "name": "FFmpeg",
       "category": "tool",
-      "dayCount": 48,
-      "totalCount": 152,
+      "dayCount": 49,
+      "totalCount": 156,
       "firstSeen": "2026-06-26",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "ffprobe",
       "name": "ffprobe",
       "category": "tool",
-      "dayCount": 7,
-      "totalCount": 18,
+      "dayCount": 8,
+      "totalCount": 20,
       "firstSeen": "2026-08-03",
-      "lastSeen": "2026-09-03"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "flux3image",
@@ -694,10 +703,10 @@
       "id": "git",
       "name": "Git",
       "category": "vcs",
-      "dayCount": 99,
-      "totalCount": 476,
+      "dayCount": 100,
+      "totalCount": 479,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "github",
@@ -712,10 +721,10 @@
       "id": "githubactions",
       "name": "GitHub Actions",
       "category": "tool",
-      "dayCount": 27,
-      "totalCount": 123,
+      "dayCount": 28,
+      "totalCount": 125,
       "firstSeen": "2026-06-10",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "githubapi",
@@ -910,10 +919,10 @@
       "id": "h264",
       "name": "H.264",
       "category": "format",
-      "dayCount": 17,
-      "totalCount": 35,
+      "dayCount": 18,
+      "totalCount": 38,
       "firstSeen": "2026-07-09",
-      "lastSeen": "2026-10-09"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "hackernews",
@@ -1045,10 +1054,10 @@
       "id": "javascript",
       "name": "JavaScript",
       "category": "language",
-      "dayCount": 26,
-      "totalCount": 140,
+      "dayCount": 27,
+      "totalCount": 145,
       "firstSeen": "2026-07-05",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "jdk",
@@ -1081,10 +1090,10 @@
       "id": "json",
       "name": "JSON",
       "category": "format",
-      "dayCount": 37,
-      "totalCount": 201,
+      "dayCount": 38,
+      "totalCount": 203,
       "firstSeen": "2026-05-19",
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "jsonschema",
@@ -1162,10 +1171,10 @@
       "id": "markdown",
       "name": "Markdown",
       "category": "format",
-      "dayCount": 14,
-      "totalCount": 48,
+      "dayCount": 15,
+      "totalCount": 51,
       "firstSeen": "2026-07-23",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "mcp",
@@ -1303,6 +1312,15 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "id": "nodeedgetts",
+      "name": "node-edge-tts",
+      "category": "library",
+      "dayCount": 1,
+      "totalCount": 3,
+      "firstSeen": "2026-10-13",
+      "lastSeen": "2026-10-13"
+    },
+    {
       "id": "nodejs",
       "name": "Node.js",
       "category": "runtime",
@@ -1315,10 +1333,10 @@
       "id": "npm",
       "name": "npm",
       "category": "package-manager",
-      "dayCount": 94,
-      "totalCount": 515,
+      "dayCount": 95,
+      "totalCount": 520,
       "firstSeen": "2026-06-05",
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "numpy",
@@ -1522,19 +1540,19 @@
       "id": "pexels",
       "name": "Pexels",
       "category": "domain",
-      "dayCount": 2,
-      "totalCount": 7,
+      "dayCount": 3,
+      "totalCount": 8,
       "firstSeen": "2026-07-20",
-      "lastSeen": "2026-08-12"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "pillow",
       "name": "Pillow",
       "category": "library",
-      "dayCount": 1,
-      "totalCount": 3,
+      "dayCount": 2,
+      "totalCount": 4,
       "firstSeen": "2026-07-24",
-      "lastSeen": "2026-07-24"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "playwright",
@@ -1576,10 +1594,10 @@
       "id": "prettier",
       "name": "Prettier",
       "category": "tool",
-      "dayCount": 28,
-      "totalCount": 75,
+      "dayCount": 29,
+      "totalCount": 77,
       "firstSeen": "2026-06-17",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "puppeteer",
@@ -1639,10 +1657,10 @@
       "id": "python",
       "name": "Python",
       "category": "language",
-      "dayCount": 44,
-      "totalCount": 171,
+      "dayCount": 45,
+      "totalCount": 172,
       "firstSeen": "2026-05-17",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "pytorch",
@@ -1702,10 +1720,10 @@
       "id": "react",
       "name": "React",
       "category": "framework",
-      "dayCount": 84,
-      "totalCount": 470,
+      "dayCount": 85,
+      "totalCount": 473,
       "firstSeen": "2026-05-20",
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "reactdoctor",
@@ -1738,10 +1756,10 @@
       "id": "remotion",
       "name": "Remotion",
       "category": "framework",
-      "dayCount": 76,
-      "totalCount": 587,
+      "dayCount": 77,
+      "totalCount": 593,
       "firstSeen": "2026-05-26",
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "repositorydispatch",
@@ -1981,10 +1999,10 @@
       "id": "svg",
       "name": "SVG",
       "category": "format",
-      "dayCount": 15,
-      "totalCount": 28,
+      "dayCount": 16,
+      "totalCount": 33,
       "firstSeen": "2026-07-17",
-      "lastSeen": "2026-10-09"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "swiper",
@@ -2116,10 +2134,10 @@
       "id": "typescript",
       "name": "TypeScript",
       "category": "language",
-      "dayCount": 127,
-      "totalCount": 1017,
+      "dayCount": 128,
+      "totalCount": 1023,
       "firstSeen": "2026-05-17",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "ubuntu",
@@ -2260,10 +2278,10 @@
       "id": "wav",
       "name": "WAV",
       "category": "format",
-      "dayCount": 6,
-      "totalCount": 13,
+      "dayCount": 7,
+      "totalCount": 15,
       "firstSeen": "2026-08-02",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "webgl",
@@ -2296,10 +2314,10 @@
       "id": "websocket",
       "name": "WebSocket",
       "category": "protocol",
-      "dayCount": 1,
-      "totalCount": 2,
+      "dayCount": 2,
+      "totalCount": 4,
       "firstSeen": "2026-08-31",
-      "lastSeen": "2026-08-31"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "weixin",

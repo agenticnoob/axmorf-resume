@@ -2,10 +2,204 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "20c7496c04b834a3d92c745287fc636b2b0735a3",
-    "generatedAt": "2026-10-13T00:06:27.640676+09:00"
+    "revision": "655d522639f30258abaf2fb520723ff294ae1d27",
+    "generatedAt": "2026-10-14T00:10:41.991944+09:00"
   },
   "entries": [
+    {
+      "date": "2026-10-13",
+      "sessionCount": 4,
+      "turnCount": 130,
+      "skillsTouched": [
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 6
+        },
+        {
+          "id": "javascript",
+          "name": "JavaScript",
+          "category": "language",
+          "count": 5
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 3
+        },
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 6
+        },
+        {
+          "id": "nodeedgetts",
+          "name": "node-edge-tts",
+          "category": "library",
+          "count": 3
+        },
+        {
+          "id": "ffmpeg",
+          "name": "ffmpeg",
+          "category": "tool",
+          "count": 4
+        },
+        {
+          "id": "ffprobe",
+          "name": "ffprobe",
+          "category": "tool",
+          "count": 2
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 5
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 3
+        },
+        {
+          "id": "githubactions",
+          "name": "GitHub Actions",
+          "category": "cloud",
+          "count": 2
+        },
+        {
+          "id": "svg",
+          "name": "SVG",
+          "category": "format",
+          "count": 5
+        },
+        {
+          "id": "h264",
+          "name": "H.264",
+          "category": "format",
+          "count": 3
+        },
+        {
+          "id": "aac",
+          "name": "AAC",
+          "category": "format",
+          "count": 3
+        },
+        {
+          "id": "wav",
+          "name": "WAV",
+          "category": "format",
+          "count": 2
+        },
+        {
+          "id": "json",
+          "name": "JSON",
+          "category": "format",
+          "count": 2
+        },
+        {
+          "id": "markdown",
+          "name": "Markdown",
+          "category": "format",
+          "count": 3
+        },
+        {
+          "id": "eslint",
+          "name": "ESLint",
+          "category": "tool",
+          "count": 2
+        },
+        {
+          "id": "prettier",
+          "name": "Prettier",
+          "category": "tool",
+          "count": 2
+        },
+        {
+          "id": "websocket",
+          "name": "WebSocket",
+          "category": "protocol",
+          "count": 2
+        },
+        {
+          "id": "edgetts",
+          "name": "Edge TTS",
+          "category": "ai-provider",
+          "count": 4
+        },
+        {
+          "id": "codex",
+          "name": "Codex CLI",
+          "category": "ai-coding-tool",
+          "count": 1
+        },
+        {
+          "id": "chatgpt",
+          "name": "ChatGPT",
+          "category": "ai-provider",
+          "count": 1
+        },
+        {
+          "id": "pexels",
+          "name": "Pexels",
+          "category": "ai-provider",
+          "count": 1
+        },
+        {
+          "id": "atlascloud",
+          "name": "Atlas Cloud",
+          "category": "ai-provider",
+          "count": 1
+        },
+        {
+          "id": "pillow",
+          "name": "Pillow",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "bash",
+          "name": "Bash",
+          "category": "shell",
+          "count": 2
+        }
+      ],
+      "timelineEvent": "完成 AXMORF Studio 能力利用率断点修复、全画布正文与原创素材导入、Edge TTS 403 故障定位与升级修复，并推进 npm 0.1.22 发布验收（因首用收据缺失暂阻塞）。",
+      "tools": [
+        "TypeScript / JavaScript（axmorf-studio 源码、测试、脚本）",
+        "React + Remotion（正文 Renderer、场景渲染、抽帧验证）",
+        "node-edge-tts 1.2.10 → 1.2.11（旁白生成与接口迁移）",
+        "ffmpeg / ffprobe（音频 LUFS/峰值测量、视频完整解码、H.264/AAC 校验）",
+        "npm + GitHub Actions（包构建、依赖审计、发布准备）",
+        "Git（提交 324c293、独立工作树、工作区管理）",
+        "SVG / PNG / WAV / JSON / Markdown（原创素材、配乐、交付清单、文档）",
+        "ESLint / Prettier / React Doctor（代码与依赖健康检查）",
+        "WebSocket（Edge TTS 握手 403/429 排查）",
+        "Codex（独立配置首用验收）"
+      ],
+      "work": [
+        "【视频项目 ai-opensource-fortnight-20261013】用 0.1.21 制作 60 秒 1080×1920 竖屏无口播剪纸动画，介绍 REA、Strata、Moli、VoiceStudio 四个开源项目。流程走通 project:create:context → filmPlan/visualScenes → 本地合成 120 BPM 配乐（backgroundMusic.mode:synthesized）→ execution:resolve（inline）→ produce:inspect（外部 provider 请求 0）→ prepare → 三任务 finalize/check/commit → preview → 导出 video.mp4、cover-4x3.png、cover-3x4.png、publish.json。校验时长/分辨率/帧数/完整解码/校验和通过，音频 −15.44 LUFS、−1.27 dBTP（比指南参考 ≤−1.5 dBTP 高 0.23 dB）。用户批评 BGM 像节拍器、无吸引力，要求画面配合音乐、音效作为节奏一部分；重做方案压到 48 秒（2+38+8），加入切分贝斯、背拍鼓组、可记忆旋律、中段抽空后回归，音效对齐接触/展开/完成事件。新版正文与封面通过结构检查，但预览发现片头冲击声与音乐叠加接近削波，混音修正进入独立候选版本，最终 AAC 峰值验证与成片替换未完成。",
+        "【vox-director 调研】核对 https://github.com/alisa0808/vox-director 文档与源码：它本身即 Agent Skill，无需手动 clone（可下载 .skill 包安装），但完整自动出片需 ATLASCLOUD_API_KEY；源码仅实现 Atlas Cloud 后端，图片/视频/旁白/配乐云端生成，本地用 ffmpeg 合成；本地需 Python 3、Pillow、ffmpeg、ffprobe。仅借鉴分镜与视觉提示词则不需 Key，换后端需自行开发适配。本次未实际调用生成服务。",
+        "【axmorf-studio 风格固化诊断】审计本地 16 个 Project、15 套交付：全部 1080×1920、30fps，仅用 editorial-tech 与 hand-drawn-explainer 两种风格档案；68 个正文 Renderer 全部含 SVG，素材清单只有音频无图片/视频；构图骨架固定（标题约 9.5%、用途 19%、图形 27%、说明 80.2%、来源 90.2%）；全片统一主题底色、GlobalVisual 背景装饰压到 8% 不透明度、旁白正文视口 900×1470 且 overflow:hidden、字幕固定深色圆角底浅色居中、首尾模板占比高。创作指南已要求避免固定卡片布局，但成片审阅记录仍写“未连续观看、未实际听审”，缺少返工闭环。用户追问为何靠审片返工而非提高首轮质量，Agent 修正优先级为“先提高首轮成片质量，审片只做最后检查”。",
+        "【能力利用率断点修复】统计 68 个正文 Renderer：41 个创建时白名单为空、27 个获准使用能力、最终仅 5 个实际调用（全部只用 ProducerCamera2D）。断点原因：Root 创建时 candidateResourceIds 直接成为 Scene 白名单，漏选即永久不可见（project-create-context.ts:81、load-inputs.ts:460）；“评估已有能力”只是文字要求，检查器只能发现“声明用了但代码没调用”，无法判断“适合却没选”；WhipPan() 固定播放 Scene A/Scene B、NoiseGrain() 自带固定背景和示例文字，无法作为通用组件。已完成：新片自动向 Scene 开放 9 类已批准内置能力；增加用途检索、API 名称和中文意图查找；新增分层、3D、连续跟随、汇聚、颗粒、甩镜示例；明确标记 59 个固定演示组件；NoiseGrain、WhipPan 改为可配置组件；分开“可选能力”与“必用素材”。验证：25 项能力目录/API 示例/调用校验测试 + 9 项任务集成/无旁白资源约束/组件测试通过，完整 1453 项测试全部通过零失败零跳过，runtime 与 creator 包构建通过，React Doctor 无问题，两段真实 Remotion 渲染验证通过，记录写入 docs/ITERATION_STATUS.md。",
+        "【画面质量与配乐优化】诊断 7 类限制：SceneViewport 把正文裁进安全区（1080×1920 实际仅 900×1740）、主题底色与 8% 全局装饰限制美术变化、85 项素材中 84 项音频 1 项品牌 SVG、创建示例偏向 editorial-tech、filmPlan 停留在文字描述、合成配乐固定 C–G–Am–F 和声、默认片头 2 秒片尾 8 秒。已完成：两份 synth-score.mjs 同步，新增 arrangement 支持 tonic/mode/progression/swing/sections（instruments、density、energy），编译为既有音符事件，timeline schema 不变，新增 tests/contracts/score-arrangement.test.ts 7 项，旧配方 checksum 不变，两段真实 WAV 通过合同、checksum、48kHz 双声道完整解码（−14.61/−15.16 LUFS）；V3 正文使用全画布，文字/字幕保留独立安全区，template-copy 与 legacy v1/v2 保持原几何与 fingerprint，补 full-frame-scenes.test.tsx 回归（75 帧截取对应源帧 165–239、派生字段篡改拒绝、无字幕 policy 拒绝 narrated Story）；新增 project:asset:import -- --project <id> --input <absolute-json>，支持 PNG/JPEG/WebP 与原创静态 SVG，真实 image-generated/authored-svg provenance，事务同步素材、证据、manifest、两个 Catalog、Story pool、目标 Scene candidates，支持 grouped Beat 与 silent scene-owner，保留既有音乐 bytes，旧 --receipt 入口保留，SVG 拒绝脚本/CSS/动画/外部引用/foreignObject 并强制 namespace、拒绝非法 XML 字符/实体/裸 ]]>，图片从冻结 bytes 完整解码并拒绝损坏容器/缺像素/零帧/多帧，使用 Project operation lock 拒绝冻结项目/revision candidate/路径穿越/symlink，失败回滚、重复导入 no-op；silent Scene 的 visualIntent、soundIntent、资源列表必须与 preset 一致，冲突在获取创建锁前返回字段级错误。文档同步 16 文件，docs:check-links 通过 561 链接。全仓 1498 项测试全部通过，TypeScript、ESLint、Prettier、资源校验、构建、宿主检查通过，两段 8 秒工程样片渲染验证（content-depth.mp4、svg-growth.mp4，均 1280×720、30fps、240 帧、H.264/AAC 双声道、完整解码）。改动仅在源码，本地制作工作区仍为 0.1.21，未安装、未提交、未发布。",
+        "【we-media 每日选题与旁白故障】选题《跟不上 AI，就管不住它吗？》，来源 ChatGPT 项目「AI认知工程」对话 ID 6ac3748b-9598-83ee-b2a6-6b1ff15344e5，已直读全部 3 轮 6 条消息，脚本、分镜、AXMORF 项目已保存，计划约 115 秒、1080×1920、30fps、中文旁白、10 秒品牌片头片尾，使用已审核 Next Question 循环配乐（音量 0.15）。首段 Edge TTS 请求失败（Edge TTS request failed for chunk speed-1），按制作指南停止，未自动重试或切换供应商，无成片、三平台均未新增上传。已完成：昨日作品核实三平台公开（小红书、抖音、B站）未重复发布，发布回归测试 28/28 通过，7 项到期指标采集完成（昨日作品次日播放量小红书 49、抖音 63、B站 87，评论/收藏/分享均为 0），执行报告保存至 data/runs/2026-10-13/ai-human-control-20261013-report.md。旁白重试仍失败，经代理与不传代理均在 WebSocket 握手阶段返回 HTTP 403，代理访问微软普通页面正常，更像 TTS 接口拒绝当前客户端请求，但无法区分客户端协议变化、出口 IP 限制或服务端策略。",
+        "【REA 视频制作与 Edge TTS 修复】用户要求用最新代码在本地新建工作空间制作“最近两周热门开源项目”视频，选题定为 REA（github.com/morluto/rea），依据 gittrend.io 2026-W41 热度。新工作空间路径 ~/AgentWorkspace/axmorf-latest-20261013，规格 1080×1920、30fps、中文，片头片尾约 10 秒，正文约 65–75 秒，内容分三个连续场景（黑盒拆解、证据追踪、声音实验），使用原创黑盒主视觉、SVG 结构、分段原创配乐。首次配音失败：node-edge-tts@1.2.10 连接旧接口，WebSocket 握手返回 HTTP 403；定位上游 1.2.11 已迁移接口地址（PR #14），隔离安装 1.2.11 后握手成功。修复：升级 node-edge-tts 到 1.2.11，同步代理域名判断，错误脱敏显示状态码，失败只请求一次。验证：20 项针对性测试通过，完整 1499 项测试、类型检查、Lint、构建、宿主渲染检查全部通过，重新打包并更新新工作空间，六项环境检查通过。配音续跑 10/15 段已缓存，第 11 段遇 HTTP 429 限流，用户授权冷却后仅续跑剩余 5 段，最终 15 段全部成功，实测成片 76.5 秒，交付 video.mp4、cover-4x3.png、cover-3x4.png、publish.json，七项交付检查通过，完整解码通过。",
+        "【文档审计与对齐】只读审计发现多处过时描述：CAPABILITY_CATALOG.md 仍称 asset:import 只准入 Pexels receipt，应补 --input 原创生图/SVG 路径；capability/style 源码 authority 路径过时，应为 packages/studio/src/remotion/...；VISUAL_NARRATIVE_QUALITY.md 错把曲库 BGM 说成覆盖首尾并抑制全部 Scene 音乐，当前库/文件音乐为 content-window，仅 synthesized 使用 composition 范围；README 与 template README 的“正文共用主题”表述需改为 theme 管理 fallback/文字/品牌角色，full-frame Scene 美术可按题材用色；producer-config.md 仍要求新片从库选曲，应说明新片默认本地 synthesized 配乐；authoring.md 要求全部选用能力逐项写入 pool/candidate，应对齐默认 all-approved 可选能力自动注入；production-workflow.md 应明确 workers 接收本次冻结的 optional capability 范围；creative-playbook.md 应改为“Composition 拥有兜底背景；Scene root 透明，子层可铺满场景美术”。已确认一致：Skill references 两侧同步、policy schema21/v28、TaskExecutionContract v4、readability v3/viewport v2、Edge TTS 文档对齐 1.2.11。文档回归 44 项通过，两个包检查通过，提交 324c293 推送到 axmorf/npm-workspace-open-source，工作树干净，npm 公开版本仍为 0.1.21。",
+        "【npm 0.1.22 发布准备】用户要求忽略本地改动，通过 GitHub Actions 发布最新 npm 包。远端最新提交 324c293，npm 当前 0.1.21，准备发布 0.1.22。建立独立工作树，包构建、包边界检查、依赖审计通过，1499 项测试、类型检查、构建、宿主检查全部通过。候选包冻结：298 个 runtime 文件、76 个 creator 文件、47 份生成指南，最小真实视频完成 H.264/AAC、60 帧、完整解码验证。全新 Workspace 首用验收：依赖安装、bootstrap、doctor 通过，独立 Codex 配置运行；首用测试 60 秒、六个独立正文场景，四路原生子任务能力验证通过，原创配乐生成，原创 SVG 素材准入走通；8 项创作任务（6 场景 + 全局视觉 + 封面）执行，任务池补位正常；一处移动元素短暂遮住小标签，通过隔离修订处理，仅重做 1 个场景，其余 10 项产物复用，外部服务请求为 0；最终交付 1920×1080、30fps、1800 帧，双比例封面和发布信息齐全，音轨无削波，独立确认七项 final check、四文件 checksum、完整解码通过。当前阻塞：发布验收器在读取被宿主截断的启动日志时停止，无法生成正式首用收据；仓库发布规则 FIRST_USE_RELEASE_GATE.md:26 要求“The maintainer may explicitly approve reuse of prior acceptance for one release.”，之前的授权只适用于 0.1.21，不能用于 0.1.22，已向用户请求确认是否仅本次复用既有验收继续通过 Actions 发布 0.1.22，尚未触发 npm 发布，npm 仍为 0.1.21。"
+      ],
+      "resumeHighlight": "主导 AXMORF Studio 视频生成系统的能力利用率断点修复与画面质量升级：定位到 Root 创建时 candidateResourceIds 直接成为 Scene 白名单导致漏选即永久不可见的架构缺陷，重构为默认 all-approved 可选能力自动注入并新增用途检索与中文意图查找；将 NoiseGrain、WhipPan 从固定演示组件改造为可配置通用组件；新增 project:asset:import 支持原创生图与静态 SVG 的事务性导入（含 provenance、路径穿越/symlink 拒绝、失败回滚、重复导入 no-op）；将 V3 正文从 900×1740 安全区裁切升级为全画布渲染并保留 legacy 几何兼容；扩展 synth-score.mjs 支持 tonic/mode/progression/swing/sections 编排；同步修复 node-edge-tts 1.2.10→1.2.11 接口迁移导致的 WebSocket 403 故障。全仓 1499 项测试、类型检查、Lint、构建、宿主渲染检查全部通过，两段真实 Remotion 渲染与 76.5 秒成片完整解码验证通过，提交 324c293 推送并推进 npm 0.1.22 发布验收。"
+    },
     {
       "date": "2026-10-12",
       "sessionCount": 5,
