@@ -2,10 +2,154 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "655d522639f30258abaf2fb520723ff294ae1d27",
-    "generatedAt": "2026-10-14T00:10:41.991944+09:00"
+    "revision": "6dca26567b3f4bccce465d50db42140aa33b0501",
+    "generatedAt": "2026-10-15T00:12:45.365186+09:00"
   },
   "entries": [
+    {
+      "date": "2026-10-14",
+      "sessionCount": 7,
+      "turnCount": 110,
+      "skillsTouched": [
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 12
+        },
+        {
+          "id": "nextjs",
+          "name": "Next.js",
+          "category": "framework",
+          "count": 6
+        },
+        {
+          "id": "threejs",
+          "name": "Three.js",
+          "category": "library",
+          "count": 10
+        },
+        {
+          "id": "reactthreefiber",
+          "name": "React Three Fiber",
+          "category": "library",
+          "count": 10
+        },
+        {
+          "id": "drei",
+          "name": "Drei",
+          "category": "library",
+          "count": 4
+        },
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 8
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 6
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 6
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "category": "runtime",
+          "count": 4
+        },
+        {
+          "id": "vite",
+          "name": "Vite",
+          "category": "build-tool",
+          "count": 3
+        },
+        {
+          "id": "vercel",
+          "name": "Vercel",
+          "category": "cloud",
+          "count": 2
+        },
+        {
+          "id": "githubactions",
+          "name": "GitHub Actions",
+          "category": "cloud",
+          "count": 2
+        },
+        {
+          "id": "rapier",
+          "name": "Rapier",
+          "category": "library",
+          "count": 2
+        },
+        {
+          "id": "css",
+          "name": "CSS",
+          "category": "language",
+          "count": 3
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "category": "tool",
+          "count": 3
+        },
+        {
+          "id": "imagegen",
+          "name": "ImageGen",
+          "category": "ai-provider",
+          "count": 2
+        },
+        {
+          "id": "homebrew",
+          "name": "Homebrew",
+          "category": "tool",
+          "count": 2
+        },
+        {
+          "id": "chromium",
+          "name": "Chromium",
+          "category": "tool",
+          "count": 3
+        },
+        {
+          "id": "markdown",
+          "name": "Markdown",
+          "category": "format",
+          "count": 3
+        },
+        {
+          "id": "json",
+          "name": "JSON",
+          "category": "format",
+          "count": 2
+        }
+      ],
+      "timelineEvent": "dom-webgl-workspace 从 124 文件/2.8 万行自研 WebGL Runtime 重构为 8 文件/约 1168 行的 R3F/Three.js 协调层，发布 0.2.0-alpha.0 并完成 hero-next 升级与线上发布。",
+      "tools": [
+        "React、Next.js、React Three Fiber、Three.js、Drei、Rapier",
+        "TypeScript、Node.js、npm workspaces、Vite",
+        "Git、GitHub Actions、Vercel、Chromium 浏览器验证",
+        "FFmpeg、ImageGen、Homebrew、Markdown/JSON"
+      ],
+      "work": [
+        "【dom-webgl-workspace 重构与发布】将项目从自研底层 WebGL Runtime 收缩为基于 R3F/Three.js 的 DOM 与场景协调层：源码从 124 个文件、约 28010 行收敛到 8 个文件、约 1168 行；移除材质 facade、场景注册、对象管理、物理、后处理等重复封装，底层渲染、材质、GLB/纹理加载、动画播放、物理全部交给 R3F/Three.js/Drei/Rapier。Runtime 只保留 DOM 测量、DOM→场景坐标映射、滚动进度、章节激活、DOM/WebGL 交接、fallback、离屏暂停、资源生命周期协调。全页保持单 Canvas、单帧循环，Runtime 接入 R3F 帧回调与 invalidate。公共 API 收敛为 18 个函数/组件导出，API 清单从构建声明重新生成。Hero 完成原生 R3F 迁移（四章画面、滚动、模型、项目切换、长按主题、反向滚动、移动端均通过浏览器复核）；Example 完成 9 个 recipes 和 5 个进阶示例迁移（文本、媒体、视窗、物理、拾取、拖拽、弹簧、运动学模型等保留）。删除普通图片、GLB、视频的重复预热，仅保留图像序列并发调度。修复多项回归：fallback 改为只控制 opacity 保留语义 DOM 可访问性、章节卡片深度遮挡、DOM registry 样式写回吞失、opacity 恢复比较 !important 所有权、WebGL context 丢失后 recipe ready 状态、React 隐藏恢复与页面暂停后时钟恢复、媒体 object-fit:cover 裁剪比例、模型缩放跟随 Runtime DOM 尺寸、物理测试等待时机。验证：526 项测试（104 个文件）通过、生产构建通过、npm tarball 检查通过、独立消费者模板本地 tarball 安装后 SSR/类型检查/Vite 生产构建/真实 Chromium 渲染通过（GLB 绘制、进度反向变化、context 丢失降级、卸载重挂载）；桌面与 390px 移动端、单 Canvas、无横向溢出、相机拖动、刚体拖放、模型明暗、阅读切换、真实 WebGL context 丢失与恢复均通过。文档、consumer skill、模板、公共 API guards 已迁移到 R3F/Three.js 边界，补上 0.1→0.2 迁移说明。发布：提交 7b9c361 推送至 main 与当前分支，文档对齐提交 c7c7dfe；@viselora/dom-webgl 与 @viselora/scroll-adapters 均发布 0.2.0-alpha.0 到 alpha 通道，校验值一致，发布 CI 通过。已知问题：本机默认 npmmirror 有同步延迟返回 404，需使用官方 registry 安装，已写入文档。用户确认 demo 效果可以，但未做逐像素一致性对比。",
+        "【hero-next 升级与发布】将 hero-next 升级至 Viselora 0.2.0-alpha.0，从旧 facade 迁移到 R3F/Three.js 原生渲染。新增场景组件：HeroAxiomsScene、HeroProjectRoomScene、HeroGhostBackground、HeroTetrahedron、HeroProfileModel、HeroText、HeroJournalScene。保留 journal flight、真实 mesh 长按主题切换、reading 模式、外部主题同步、最终帧绑定、0.12 emissive fill、axioms 纹理打包、项目海报与展览靠近、DOM exhibit 投影、roomStore 行为、16 日日志窗口与配对透视、动态 reduced-motion。人物模型仅销毁克隆材质，保留共享 GLB 几何与纹理；atlas 保留 mipmaps；Ghost 深度保留 40。发现并修复一处 CSS 回归：globals.css:146 新增隐藏规则 specificity (0,3,0) 高于阅读模式恢复 (0,2,0) 和打印恢复 (0,1,0)，导致手机阅读模式和打印中第二章正文被隐藏（1px×1px; overflow:hidden），且 Canvas 阅读模式不挂载 HeroAxiomsScene 造成空白。验证：463 项测试、完整检查、生产构建通过；桌面真实长按切主题、各章正反向滚动、项目展台打开/Escape 返回（同一 canvas、选中墙面保留）、日志显示、WebGL 上下文丢失后正文恢复与重建渲染、390×844 reduced-motion 下主题/语言切换、8 篇文章、日志分页（12→24）、打印正文均通过。文档对齐：Viselora 双语案例从旧版'托管场景、材质和加载器'改为 0.2 实际边界。远端 main 有一次自动项目内容更新（仅 data/projects.json），已先合入再验证。提交 43e91c0（升级）与 170c2a9（发布记录）均已推送 main。GitHub Actions → Vercel 发布流程通过，线上 https://zzzxc.com 已运行新版；145 条日志源提交与哈希校验通过，48 份双语 Markdown、项目详情、404 回读通过。未跟踪简历保留本地未提交；真机性能未验收。",
+        "【rc1-workspace：git bisect 科普短视频（已交付）】约 45 秒竖屏中文科普短视频，讲 git bisect 如何用二分法定位引入 bug 的提交，面向 Git 新手。内容设计：8 次可疑提交连续案例，演示 8→4→2→1 三轮缩半；C4 正常后查 C5–C8，C6 出错后查 C5–C6，C5 也出错锁定 C5 为首次坏提交；结尾提醒 git bisect reset。区分 Git 负责切换中间版本、开发者负责测试并反馈 good/bad；区分'定位问题提交'与'修复 bug'。命令写法已对照 Git 官方文档核对。技术规格：1080×1920、30fps、简体中文；片头片尾共 10 秒，正文约 35 秒；配音实测总时长 45.13 秒（比目标多 0.13 秒）。已完成：工作区 doctor 渲染检查通过、两张原创素材准入、配音生成、环境装饰层完成、横竖两张封面完成并通过检查、正文动画源码与任务检查通过、32 个采样帧复查。预览中发现并修正：初始化命令末行被裁切、扫描光带被主体遮挡、候选数字比 C4 的'正常'结果晚更新 18 帧（时序已统一）。最终交付：正式成片已生成，四文件交付校验通过；1080×1920、30fps、45.13 秒；AAC 音轨约 −15.8 LUFS、峰值 −2.3 dBTP；封面目视检查通过。验证边界：浏览器预览会话失效，改用解码后实际视频帧检查；未完成连续观看和听审，已记录该限制。",
+        "【rc023-workspace：HTTPS 科普短视频（阻塞，未交付）】约 45 秒竖屏中文科普短视频，讲浏览器与网站间 HTTPS 握手，面向入门开发者。以 TLS 1.3 首次握手为例，讲协商参数、验证身份、生成密钥、加密传输。规格：1080×1920、中文配音与字幕；工作区自带片头片尾共 10 秒，正文约 35 秒。画面围绕同一对浏览器与服务器：公开参数两端往返，密钥各自内部生成，身份验证后传输加密数据。用 imagegen 生成分层场景素材，制作轻量电子配乐。生产检查：新项目状态 configured-authoring，预计配音调用 7 次，缓存命中 0，无可复用产物。阻塞：生产准备报错，返回的 workflow 列表超过运行时允许的 16 项，准备和只读检查均失败，未生成成片。已保存成果：脚本、配音、原创配乐、画面素材；实测时间轴 42.77 秒、1080×1920，尚未渲染视频。诊断与续接记录：~/AgentWorkspace/axmorf-acceptance/rc023-workspace/inputs/https-production-blocker.md。按 SKILL.md 系统故障'stop with diagnosis'要求已停止重试；需单独修复工作区运行时后才能继续。",
+        "【rc023b-workspace：HTTPS 握手科普短视频（进行中，未交付）】约 45 秒竖屏中文科普短视频，面向入门开发者，讲清浏览器与网站之间的 HTTPS 握手如何建立安全连接。以现代 TLS 1.3 为例，对照 IETF RFC 8446 第 2 节核对技术顺序；重点纠正'双方各自派生密钥而非直接传输最终密钥'的常见误解。规格：1080×1920、30 fps、中文配音与字幕；保留工作区默认片头片尾共 10 秒，正文约 35 秒；实际时长以配音测量为准。已完成：环境 doctor 与浏览器渲染检查通过；脚本压缩至 149 字，覆盖公钥交换、本地派生密钥、证书与签名验证、握手校验和加密传输；生成环境板与透明服务器素材（imagegen），叠加可精确控制的握手动画；生产检查项目已配置，预计 8 段配音请求，缓存命中 0，无失效任务，主机验证可同时运行 3 个制作子任务；配音测量完成，预计成片总长 45.3 秒（比目标多 0.3 秒）；动画、封面、全局视觉并行制作；正文在单一连续场景中展示完整握手过程，含一次'篡改被拒收'动作解释完整性保护；4:3 与 3:4 封面已通过代码与产物检查；全局环境光通过检查；正文动画按实测配音安排关键动作；第一轮预览检查 20 个关键帧，覆盖五个讲解段落；发现并修正两处画面问题：顶部遮罩衔接、数据包与曲线路径对齐；正在复查修正后的预览。未完成：修正后预览复查、最终渲染导出、交付竖屏 MP4 + 两张封面 + 发布信息文件。",
+        "【we-media：每日 AI 视频选题制作与发布（仅指令，未执行）】自动化任务：每日 AI 视频选题、AXMORF 制作交接、小红书/抖音/B站三平台浏览器发布与复盘。选题来源：ChatGPT 项目'AI认知工程'对话 ID 6ac3748b-9598-83ee-b2a6-6b1ff15344e5《AI发展历程与趋势》，优先通过对话读取工具获取正文，按需翻页；直读不可用时回退本地讨论缓存。制作要求：自主设计观点、脚本、分镜、视觉风格与声音；时长通常 90–150 秒；使用 AXMORF 公开制作流程，结合已审核循环配乐、旁白与动作音效，产出正片、3:4 与 4:3 封面及发布交付资料。发布要求：we-media 预检后按既有授权发布到小红书、抖音、B站；逐个平台核实提交结果、作品 ID 与链接；状态不明先查证再决定下一步；登录/验证问题报告所需操作。关键约束：区分 submitted/under_review/public/unknown/blocked；填表成功不等于发布成功；最终提交前回读真实页面素材、标题、正文、话题、封面、声明、公开范围与发布时间；单次点击后从账号后台查证，结果不明禁止盲重试；不绕过登录失效、验证码或页面变化；素材只能从所选 data/ 目录解析，防止路径穿越；不提交 data/、登录信息、Cookie、Token、浏览器状态、媒体文件或临时运行产物；每条作品使用独立 data/<story-id>/；不运行会删除 data/ 的同步。验证要求：代码变更后至少运行 node --test tests/publish.test.js；涉及浏览器流程先完成无副作用默认预检；真实最终发布只在页面验证及授权下执行。复盘要求：次日和第七天只记录页面可见指标，未知数据明确留空；每日用 node scripts/collect-metrics.js --run 按已记录作品 ID 从真实创作者页面取到期指标，缺失字段和页面失败写明未知原因；复盘结果用于下一轮选题。当前状态：本 chunk 中该工作流仅给出任务指令与约束，未见实际执行动作或产出记录。",
+        "【本地环境：Claude Code CLI 升级】Claude Code CLI 升级失败原因：当前用户 ai 与旧安装目录所有者 lii 不一致，Homebrew 替换时报 Permission denied。已修复 /usr/local/Caskroom/claude-code 所有权并通过 Homebrew 升级：2.1.195 → 2.1.287。验证：/usr/local/bin/claude 可运行，版本 2.1.287，Homebrew outdated=false。后续升级命令：brew upgrade --cask claude-code && claude --version。用户询问 Claude CLI 与桌面端关系：CLI 与桌面端 Code 使用同一底层编码 Agent，但安装和更新独立；桌面端 Chat/Cowork 不是 CLI。"
+      ],
+      "resumeHighlight": "主导 dom-webgl-workspace 架构重构：将 124 文件/2.8 万行的自研 WebGL Runtime 收缩为 8 文件/约 1168 行的 R3F/Three.js 协调层，移除重复的渲染、材质、加载器、动画和物理封装，保留 DOM 布局、进度、生命周期和降级管理；完成 Hero 与 Example 全量迁移，526 项测试与生产构建通过，独立消费者模板 SSR/类型检查/Vite 构建/真实 Chromium 渲染验证通过，发布 @viselora/dom-webgl 与 @viselora/scroll-adapters 0.2.0-alpha.0 到 alpha 通道；随后将 hero-next 升级至新版并完成线上发布（https://zzzxc.com），463 项测试与桌面/移动端/WebGL 丢失恢复/reduced-motion/打印等真实浏览器验证全部通过。"
+    },
     {
       "date": "2026-10-13",
       "sessionCount": 4,

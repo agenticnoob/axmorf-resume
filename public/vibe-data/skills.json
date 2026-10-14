@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "655d522639f30258abaf2fb520723ff294ae1d27",
-    "generatedAt": "2026-10-14T00:10:41.991944+09:00"
+    "revision": "6dca26567b3f4bccce465d50db42140aa33b0501",
+    "generatedAt": "2026-10-15T00:12:45.365186+09:00"
   },
   "skills": [
     {
@@ -262,10 +262,10 @@
       "id": "chromium",
       "name": "Chromium",
       "category": "tool",
-      "dayCount": 17,
-      "totalCount": 48,
+      "dayCount": 18,
+      "totalCount": 51,
       "firstSeen": "2026-06-28",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "claude",
@@ -388,10 +388,10 @@
       "id": "css",
       "name": "CSS",
       "category": "format",
-      "dayCount": 15,
-      "totalCount": 59,
+      "dayCount": 16,
+      "totalCount": 62,
       "firstSeen": "2026-05-20",
-      "lastSeen": "2026-09-25"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "csv",
@@ -529,6 +529,15 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "id": "drei",
+      "name": "Drei",
+      "category": "library",
+      "dayCount": 1,
+      "totalCount": 4,
+      "firstSeen": "2026-10-14",
+      "lastSeen": "2026-10-14"
+    },
+    {
       "id": "edgetts",
       "name": "Edge TTS",
       "category": "ai-provider",
@@ -649,10 +658,10 @@
       "id": "ffmpeg",
       "name": "FFmpeg",
       "category": "tool",
-      "dayCount": 49,
-      "totalCount": 156,
+      "dayCount": 50,
+      "totalCount": 159,
       "firstSeen": "2026-06-26",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "ffprobe",
@@ -703,10 +712,10 @@
       "id": "git",
       "name": "Git",
       "category": "vcs",
-      "dayCount": 100,
-      "totalCount": 479,
+      "dayCount": 101,
+      "totalCount": 485,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "github",
@@ -721,10 +730,10 @@
       "id": "githubactions",
       "name": "GitHub Actions",
       "category": "tool",
-      "dayCount": 28,
-      "totalCount": 125,
+      "dayCount": 29,
+      "totalCount": 127,
       "firstSeen": "2026-06-10",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "githubapi",
@@ -945,11 +954,11 @@
     {
       "id": "homebrew",
       "name": "Homebrew",
-      "category": "package-manager",
-      "dayCount": 1,
-      "totalCount": 1,
+      "category": "tool",
+      "dayCount": 2,
+      "totalCount": 3,
       "firstSeen": "2026-06-23",
-      "lastSeen": "2026-06-23"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "hsts",
@@ -1009,10 +1018,10 @@
       "id": "imagegen",
       "name": "ImageGen",
       "category": "ai-provider",
-      "dayCount": 1,
-      "totalCount": 1,
+      "dayCount": 2,
+      "totalCount": 3,
       "firstSeen": "2026-09-18",
-      "lastSeen": "2026-09-18"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "imagemagick",
@@ -1090,10 +1099,10 @@
       "id": "json",
       "name": "JSON",
       "category": "format",
-      "dayCount": 38,
-      "totalCount": 203,
+      "dayCount": 39,
+      "totalCount": 205,
       "firstSeen": "2026-05-19",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "jsonschema",
@@ -1171,10 +1180,10 @@
       "id": "markdown",
       "name": "Markdown",
       "category": "format",
-      "dayCount": 15,
-      "totalCount": 51,
+      "dayCount": 16,
+      "totalCount": 54,
       "firstSeen": "2026-07-23",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "mcp",
@@ -1297,10 +1306,10 @@
       "id": "nextjs",
       "name": "Next.js",
       "category": "framework",
-      "dayCount": 36,
-      "totalCount": 134,
+      "dayCount": 37,
+      "totalCount": 140,
       "firstSeen": "2026-05-26",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "nginx",
@@ -1324,19 +1333,19 @@
       "id": "nodejs",
       "name": "Node.js",
       "category": "runtime",
-      "dayCount": 85,
-      "totalCount": 398,
+      "dayCount": 86,
+      "totalCount": 402,
       "firstSeen": "2026-05-18",
-      "lastSeen": "2026-10-12"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "npm",
       "name": "npm",
       "category": "package-manager",
-      "dayCount": 95,
-      "totalCount": 520,
+      "dayCount": 96,
+      "totalCount": 526,
       "firstSeen": "2026-06-05",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "numpy",
@@ -1711,19 +1720,19 @@
       "id": "rapier",
       "name": "Rapier",
       "category": "library",
-      "dayCount": 1,
-      "totalCount": 2,
+      "dayCount": 2,
+      "totalCount": 4,
       "firstSeen": "2026-06-05",
-      "lastSeen": "2026-06-05"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "react",
       "name": "React",
       "category": "framework",
-      "dayCount": 85,
-      "totalCount": 473,
+      "dayCount": 86,
+      "totalCount": 485,
       "firstSeen": "2026-05-20",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "reactdoctor",
@@ -1747,10 +1756,10 @@
       "id": "reactthreefiber",
       "name": "React Three Fiber",
       "category": "library",
-      "dayCount": 3,
-      "totalCount": 5,
+      "dayCount": 4,
+      "totalCount": 15,
       "firstSeen": "2026-06-04",
-      "lastSeen": "2026-07-10"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "remotion",
@@ -2080,10 +2089,10 @@
       "id": "threejs",
       "name": "Three.js",
       "category": "library",
-      "dayCount": 45,
-      "totalCount": 220,
+      "dayCount": 46,
+      "totalCount": 230,
       "firstSeen": "2026-06-04",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "tinyhttp",
@@ -2134,10 +2143,10 @@
       "id": "typescript",
       "name": "TypeScript",
       "category": "language",
-      "dayCount": 128,
-      "totalCount": 1023,
+      "dayCount": 129,
+      "totalCount": 1031,
       "firstSeen": "2026-05-17",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "ubuntu",
@@ -2206,10 +2215,10 @@
       "id": "vercel",
       "name": "Vercel",
       "category": "cloud",
-      "dayCount": 17,
-      "totalCount": 58,
+      "dayCount": 18,
+      "totalCount": 60,
       "firstSeen": "2026-06-29",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "viseloradomwebgl",
@@ -2242,10 +2251,10 @@
       "id": "vite",
       "name": "Vite",
       "category": "build-tool",
-      "dayCount": 37,
-      "totalCount": 90,
+      "dayCount": 38,
+      "totalCount": 93,
       "firstSeen": "2026-05-20",
-      "lastSeen": "2026-09-25"
+      "lastSeen": "2026-10-14"
     },
     {
       "id": "vitest",
