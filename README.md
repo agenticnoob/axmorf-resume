@@ -93,3 +93,9 @@ npm run build
 `verify.yml` 继续作为独立测试/构建门禁；数据提交保留源 SHA 审计记录，实际发布状态、历史版本与回滚由 Vercel 管理。现有 Vercel 项目（ID `prj_h6zQ7W1hoH6m7ddyQHCtIrZlzcOA`）已连接生产仓库，`resume.zzzxc.com` 已完成域名校验和 DNS 切换。
 
 生产地址：[resume.zzzxc.com](https://resume.zzzxc.com)。Vercel 项目关联信息保存在本机 `.vercel/`，该目录已忽略，不提交到仓库。
+
+## AXMORF 品牌发布（2026-10-15）
+
+本轮统一 AXMORF · 易狸及 “Change until the axioms morph.”，完成首页署名、标题和手机布局核验。公开仓库更名、两条配套自动化目标及精确数据同步已完成，既有私有仓库、凭据、权限、fork 与 Vercel 项目身份保持原样；隐私测试采用明确合成的身份夹具。
+
+用户已批准文档对齐、最终核验、合并既有 PR11 并部署。正常 `main` 合并触发 Verify build 与 Vercel Git Production；线上验收检查品牌页面、关键路由、公开 manifest 和两份 JSON 的 SHA-256。合并前基线为 18 项测试、双 TypeScript 检查、构建通过，12 个项目、149 天日志及 272 项技能；精确源版本和后续实际发布记录分别由 manifest、PR 与部署证据提供。账号和社交资料不在本次发布范围。

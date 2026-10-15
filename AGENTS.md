@@ -1,6 +1,6 @@
 # PROJECT KNOWLEDGE BASE
 
-**Updated:** 2026-09-25
+**Updated:** 2026-10-15
 **Project:** AXMORF 工程实践手账 (axmorf-resume)
 
 ## OVERVIEW
