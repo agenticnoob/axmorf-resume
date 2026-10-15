@@ -22,34 +22,37 @@ export default function Home() {
           </svg>
         </motion.div>
 
-        <motion.h1
+        <motion.header
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-[var(--xuli-text-primary)] home-title"
+          className="home-hero-heading"
         >
-          <span className="block text-lg mb-4">{brand.name} · {brand.chineseName}</span>
-          AI 应用构建者
-          <br />
-          <span className="text-[var(--xuli-accent)]">全栈工程师</span>
-        </motion.h1>
+          <p className="home-byline font-display">{brand.name} · {brand.chineseName}</p>
+          <h1 className="home-title font-display font-bold text-[var(--xuli-text-primary)]">
+            <span className="home-title-primary">AI 应用构建者</span>
+            <span className="home-title-secondary">全栈工程师</span>
+          </h1>
+        </motion.header>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-10 home-hero-intro"
+          className="home-hero-intro"
         >
           <p className="text-lg sm:text-xl text-[var(--xuli-text-secondary)] font-body max-w-3xl leading-relaxed">
             {profile.summary}
           </p>
           <p className="font-display text-xl mt-4">{brand.tagline}</p>
           <p className="text-sm mt-2">{brand.taglineZh}</p>
-          <a href={brand.home} className="inline-flex mt-4 text-accent underline underline-offset-4">AXMORF 主站 ↗</a>
-          <span className="paper-tag mt-4 inline-flex items-center gap-2 px-4 py-1.5 text-[var(--xuli-text-secondary)] text-sm font-mono">
-            <span className="status-mark" aria-hidden="true">✓</span>
-            {profile.status}
-          </span>
+          <div className="home-profile-meta">
+            <a href={brand.home} className="inline-flex text-accent underline underline-offset-4">AXMORF 主站 ↗</a>
+            <span className="paper-tag inline-flex items-center gap-2 px-4 py-1.5 text-[var(--xuli-text-secondary)] text-sm font-mono">
+              <span className="status-mark" aria-hidden="true">✓</span>
+              {profile.status}
+            </span>
+          </div>
         </motion.div>
 
         <motion.div
