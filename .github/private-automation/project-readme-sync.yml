@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  TARGET_REPOSITORY: agenticnoob/xuli-resume
+  TARGET_REPOSITORY: agenticnoob/axmorf-resume
   TARGET_DEFAULT_BRANCH: main
   UPDATE_BRANCH: automation/github-project-introductions
   MANAGED_FILE: src/data/projects.json
@@ -34,7 +34,7 @@ jobs:
           app-id: ${{ secrets.RESUME_APP_ID }}
           private-key: ${{ secrets.RESUME_APP_PRIVATE_KEY }}
           owner: agenticnoob
-          repositories: xuli-resume
+          repositories: axmorf-resume
           permission-contents: read
           permission-pull-requests: read
 
@@ -217,7 +217,7 @@ jobs:
           app-id: ${{ secrets.RESUME_APP_ID }}
           private-key: ${{ secrets.RESUME_APP_PRIVATE_KEY }}
           owner: agenticnoob
-          repositories: xuli-resume
+          repositories: axmorf-resume
           permission-contents: write
           permission-pull-requests: write
           permission-checks: read

@@ -1,7 +1,7 @@
 # PROJECT KNOWLEDGE BASE
 
 **Updated:** 2026-09-25
-**Project:** AXMORF 工程实践手账 (xuli-resume)
+**Project:** AXMORF 工程实践手账 (axmorf-resume)
 
 ## OVERVIEW
 React 18 + TypeScript 5 + Vite 5 简历网站，9 页面展示技术能力、AI 哲学、开发过程、vibe coding 日志。
@@ -124,7 +124,7 @@ npm run sync:vibe-journal:dry -- --source <pipeline>/data --revision <40位sha>
 ```
 
 ## DEPLOY
-- 生产仓库是 `agenticnoob/xuli-resume`；`Skedush/xuli-resume` 仅作为 fork upstream，不是 Vercel 发布源
+- 生产仓库是 `agenticnoob/axmorf-resume`；原上游仓库仅作为 fork upstream，不是 Vercel 发布源
 - Pipeline 的 `journal_updated` dispatch、每日兜底 schedule 和手工运行由 `.github/workflows/sync-vibe-data.yml` 检出精确线上数据 SHA
 - CI 使用只读 deploy key 读取 Pipeline，生成后运行测试和生产构建，只提交四个受管 JSON；不要让 bot 提交其他文件
 - Vercel 原生 Git 将受管数据提交发布到 Production；同步 Action 随后回读 manifest 与两个 JSON 的 SHA-256

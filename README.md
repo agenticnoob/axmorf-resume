@@ -80,7 +80,7 @@ npm run build
 
 ## 部署
 
-生产环境使用 Vercel，不再依赖本地 Docker、Nginx、systemd timer、端口映射或 Tunnel。生产仓库是 `agenticnoob/xuli-resume`；它 fork 自 `Skedush/xuli-resume`，本地保留 `upstream` remote 以便按需同步原仓库更新。
+生产环境使用 Vercel，不再依赖本地 Docker、Nginx、systemd timer、端口映射或 Tunnel。生产仓库是 `agenticnoob/axmorf-resume`；它保留原 fork 关系，本地保留 `upstream` remote 以便按需同步原仓库更新。
 
 - Pipeline 更新通过 `repository_dispatch` 把精确 source SHA 发送给本仓库；
 - 数据 dispatch、每日兜底 schedule 与手工运行均由 `sync-vibe-data.yml` 检出线上 Pipeline，运行数据测试/生产构建，并只提交四个受管 JSON 文件；
@@ -90,6 +90,6 @@ npm run build
 - 构建命令为 `npm run build`，输出目录为 `dist`；
 - `vercel.json` 将所有应用路由重写到 `index.html`，保证 React Router 深链接可直接访问。
 
-`verify.yml` 继续作为独立测试/构建门禁；数据提交保留源 SHA 审计记录，实际发布状态、历史版本与回滚由 Vercel 管理。Vercel 项目 `agent-first/xuli-resume` 已连接生产仓库，`resume.zzzxc.com` 已完成域名校验和 DNS 切换。
+`verify.yml` 继续作为独立测试/构建门禁；数据提交保留源 SHA 审计记录，实际发布状态、历史版本与回滚由 Vercel 管理。现有 Vercel 项目（ID `prj_h6zQ7W1hoH6m7ddyQHCtIrZlzcOA`）已连接生产仓库，`resume.zzzxc.com` 已完成域名校验和 DNS 切换。
 
 生产地址：[resume.zzzxc.com](https://resume.zzzxc.com)。Vercel 项目关联信息保存在本机 `.vercel/`，该目录已忽略，不提交到仓库。
