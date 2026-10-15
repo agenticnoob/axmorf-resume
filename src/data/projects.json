@@ -129,23 +129,23 @@
       }
     },
     {
-      "name": "dom-webgl-workspace / Viselora",
-      "subtitle": "声明式 WebGL 运行时与 SDK",
+      "name": "Viselora DOM WebGL",
+      "subtitle": "DOM 与 WebGL 协同运行时",
       "role": "系统抽象 · 公开 API · npm 发布",
       "stage": "alpha",
-      "description": "围绕“保留 DOM 语义，以声明驱动空间视觉”构建可复用运行时，统一管理渲染、资源、输入和生命周期。",
+      "description": "面向 React 19 与 Next.js 应用，协调语义化 DOM 和单一 React Three Fiber 场景，统一处理 DOM 测量、进度输入、回退可见性与可用状态，并通过公开包连接 Three.js 视觉内容和页面交互。",
       "tech": [
         "TypeScript",
-        "React",
-        "WebGL",
-        "npm workspace",
-        "声明式 API"
+        "React 19",
+        "React Three Fiber 9",
+        "Three.js",
+        "WebGL"
       ],
       "highlights": [
-        "DOM 内容的空间视觉声明",
-        "单运行时资源与生命周期管理",
-        "滚动与输入适配器",
-        "公开包与 Agent 使用指引"
+        "单运行时与单 Canvas 架构",
+        "DOM 目标、测量与运行时 Hooks",
+        "Lenis、GSAP 与 ScrollTrigger 可选适配",
+        "支持原生 R3F JSX、Hooks 与 Three.js 对象"
       ],
       "links": [
         {
@@ -160,7 +160,7 @@
       "github": {
         "repositoryId": 1272434230,
         "fullName": "agenticnoob/dom-webgl-workspace",
-        "fingerprint": "72bea636e798384b3e7111bd9c61520236b9e00c90b886f75571ef31bd949dac"
+        "fingerprint": "46bef8d4889b1ba8a1c523d1e750d8297ae1f110d120850e58dc6d450d8c6773"
       }
     },
     {
@@ -344,20 +344,21 @@
       "subtitle": "双语交互式个人网站",
       "role": "开源项目",
       "stage": "开源项目",
-      "description": "基于 Next.js App Router 构建的双语个人网站，以章节形式呈现个人介绍、AI 与哲学文章、公开项目、公共频道和每日记录。针对桌面端与移动、触屏及短横屏提供差异化布局，并提供可被浏览器和智能体读取的 HTML、Markdown、站点地图及 llms.txt 内容入口。",
+      "description": "基于 Next.js App Router 构建的双语个人网站，以章节呈现个人介绍、AI 与哲学文章、公开项目、公共频道和每日记录。网站针对桌面、移动、触屏及短横屏提供差异化布局，并提供无需 JavaScript 也可阅读的 Agent HTML、Markdown、站点地图与 llms.txt 入口。",
       "tech": [
         "TypeScript",
         "Next.js App Router",
-        "React",
-        "WebGL",
+        "React 19",
+        "React Three Fiber 9",
+        "Three.js",
         "Vercel",
         "GitHub Actions"
       ],
       "highlights": [
-        "共享类型化内容与持久化语言、主题及项目房间状态",
-        "桌面端提供 WebGL 项目展厅、动态文章索引与透视日志，阅读布局适配移动端、触屏及短横屏",
-        "项目案例支持拦截式原生对话框与独立页面两种路由呈现，并提供双语项目目录",
-        "每日记录按日期分页加载，保留单日完整工具与事件内容；Agent 入口在无 JavaScript 时仍可阅读"
+        "共享类型化内容并持久化语言、主题与项目房间状态",
+        "桌面端采用单一 WebGL 场景，阅读布局适配移动、触屏及短横屏",
+        "项目案例支持原生对话框拦截路由与独立页面",
+        "每日记录分页加载，并提供双语 Agent HTML 与 Markdown 内容"
       ],
       "links": [
         {
@@ -368,7 +369,7 @@
       "github": {
         "repositoryId": 1366880001,
         "fullName": "agenticnoob/hero-next",
-        "fingerprint": "37622ad2f7c3facb04122f7b1ee48fb996e72642528df9f6c5fa32dfe59a9628"
+        "fingerprint": "e88d8815488412d852960ca82f4754756da13d2be7754e61c9490451fb9691b8"
       }
     }
   ]
