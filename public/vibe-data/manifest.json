@@ -2,18 +2,18 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "5d47d23d4da572dff8cfb5d261329d17505113f2",
+    "revision": "c082eebc1785107509de80bb835a6e6b71468fe1",
     "generatedAt": "2026-10-16T00:06:16.679287+09:00"
   },
   "journal": {
     "url": "/vibe-data/journal.json",
-    "sha256": "02c9304a806a2aacc74a4bf278bff6dca3a10d20c40abe87200c2b7e95ab332b",
+    "sha256": "da92141fcd5aa961942c64667b1cb460853b58af9e979dfa9fed0108dd3bc366",
     "entryCount": 149,
     "latestDate": "2026-10-15"
   },
   "skills": {
     "url": "/vibe-data/skills.json",
-    "sha256": "f8810a9b989701e8582eef78dc26e8b771f3de48c13c52204e9697d521258d72",
+    "sha256": "7b3c0334625699b9a36014db77a4c36b23237f47521246c75097e38a4e548ddf",
     "skillCount": 272
   }
 }
