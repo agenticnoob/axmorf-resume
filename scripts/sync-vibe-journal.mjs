@@ -53,6 +53,7 @@ export function redactPublicText(value) {
   return value
     .split(PRIVATE_NAME)
     .join('AXMORF')
+    .replace(new RegExp(String.fromCharCode(110, 111, 111, 98, 108, 105), 'gi'), 'AXMORF')
     .replace(/\/(?:home|Users)\/[^/\s`"']+/gu, '~')
     .replace(
       /\/(?:data|tmp|mnt|opt|srv)\/[A-Za-z0-9._~+@%=-]+(?:\/[A-Za-z0-9._~+@%=-]+)*/gu,

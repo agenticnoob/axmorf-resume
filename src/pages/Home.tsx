@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { profile, projects } from '../data/resume'
+import { brand } from '../data/brand'
 
 const focusWords = ['前端工程', 'Agent 协作', 'Python', '全栈实践', '可靠交付']
 
@@ -27,6 +28,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-[var(--xuli-text-primary)] home-title"
         >
+          <span className="block text-lg mb-4">{brand.name} · {brand.chineseName}</span>
           AI 应用构建者
           <br />
           <span className="text-[var(--xuli-accent)]">全栈工程师</span>
@@ -41,6 +43,9 @@ export default function Home() {
           <p className="text-lg sm:text-xl text-[var(--xuli-text-secondary)] font-body max-w-3xl leading-relaxed">
             {profile.summary}
           </p>
+          <p className="font-display text-xl mt-4">{brand.tagline}</p>
+          <p className="text-sm mt-2">{brand.taglineZh}</p>
+          <a href={brand.home} className="inline-flex mt-4 text-accent underline underline-offset-4">AXMORF 主站 ↗</a>
           <span className="paper-tag mt-4 inline-flex items-center gap-2 px-4 py-1.5 text-[var(--xuli-text-secondary)] text-sm font-mono">
             <span className="status-mark" aria-hidden="true">✓</span>
             {profile.status}

@@ -1,5 +1,6 @@
 import PageHeader from '../components/PageHeader'
 import { capabilityHighlights, profile, profileLinks } from '../data/resume'
+import { brand } from '../data/brand'
 
 const stats = [
   { value: '8 年', label: '软件行业经验' },
@@ -26,8 +27,9 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h2 className="text-[var(--xuli-text-primary)] font-display text-2xl mb-1">{profile.name}</h2>
+              <h2 className="text-[var(--xuli-text-primary)] font-display text-2xl mb-1">{profile.name} · {brand.chineseName}</h2>
               <p className="text-[var(--xuli-accent)] text-sm">{profile.title}</p>
+              <p className="mt-3 text-sm">{brand.tagline}</p>
             </div>
 
             <dl className="space-y-3 mb-8">
@@ -53,6 +55,9 @@ export default function About() {
             <span className="eyebrow-note">我的位置</span>
             <h2 className="font-display text-2xl text-[var(--xuli-text-primary)] mt-2 mb-5">AI 时代，能力应由过程与作品共同证明</h2>
             <div className="space-y-4 text-[var(--xuli-text-secondary)] leading-relaxed">
+              <p>{brand.introductionZh}</p>
+              <p>{brand.meaningZh}</p>
+              <p>{brand.taglineZh}</p>
               <p>
                 我希望通过自己提出的问题、发现和筛选工具的方法、组织 AI 完成任务的过程，以及可以检查的作品，呈现我能做什么。
               </p>
