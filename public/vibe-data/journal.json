@@ -1430,7 +1430,7 @@
         "简历优化：方向为 AI 应用、Agent 工作流、全栈工程，突出 Agent 工作流设计、Skills/MCP 维护、工程验收与完整交付职责；压缩工具尝试经历，保留早期 AI 关注与环境选型；补充 AXMORF、Viselora 的 Skill 维护成果。个人优势 855/1000 字，已同步 BOSS 在线简历与 PDF 附件，删除旧附件，本地简历文件已同步更新。",
         "0.1.16 音效与文档核对：下载 npm 正式发布包确认 24 个 WAV 文件齐全，Catalog 登记 24 条，checksum 与文件大小均通过；音效目录另有原有片头音效不计入。随 Workspace 生成的 authoring.md 指导 Agent 查询音效库，每条素材含用途、时长和卡点说明；Agent 将选中音效加入项目和 Scene 资源列表，在 sound-plan.json 中安排播放时机、音量及与画面动作同步，制作系统通过 SoundDesignTrack 将音效加入成片。",
         "工作空间版本确认：核对 package.json、package-lock.json、实际安装版本与 npm registry，确认当前依赖、锁文件和安装版本均为 @axmorf/studio@0.1.16，registry 最新版也是 0.1.16；但现有文件无法证明最初创建版本，只能确认当前已对齐最新版。",
-        "个人主页介绍视频制作：参考 awesome-opus5-5-videos 开源项目风格，主题为介绍 zzzxc.com。先运行环境检查，真实浏览器渲染通过；查看主页确认包含 noobli、Agent-first 构建方式、四面体导航，以及 AXMORF Studio、Viselora 等项目；参考页面视频未成功加载，但继续基于仓库风格制作。",
+        "个人主页介绍视频制作：参考 awesome-opus5-5-videos 开源项目风格，主题为介绍 zzzxc.com。先运行环境检查，真实浏览器渲染通过；查看主页确认包含 AXMORF、Agent-first 构建方式、四面体导航，以及 AXMORF Studio、Viselora 等项目；参考页面视频未成功加载，但继续基于仓库风格制作。",
         "制作参数：约 40 秒中文竖屏短片，继承工作空间 1080×1920、30fps 设置；片头片尾合计 10 秒，正文预算约 30 秒。视觉采用四面体展开、大字排版和项目展示；点击、落位与转场音效对齐画面动作。project:create 后确认符合 1080×1920、30fps、中文设置；produce inspect 显示当前为已配置创作稿，预计 5 次旁白请求，缓存命中为 0，尚无旧成片或任务复用计划，执行方式继承工作空间串行设置。",
         "旁白封装后实测总时长 34.47 秒，比 40 秒目标短 5.53 秒，包含 10 秒片头片尾。随后制作五段正文动效、全局装饰和封面，节奏按实测旁白落点安排；全局装饰和正文收尾通过任务校验，收尾将四面体收拢并把箭头送到完整网址，留出阅读时间。网址输入、构建流程、正文收尾和两种比例封面均通过校验，七项制作任务全部通过校验并提交。",
         "正文配置 31 处音效落点，覆盖网址键入、点击、四面体展开、分镜落位和验证完成。渲染完成后，成片和封面通过交付校验。最终成片为 34.47 秒竖屏视频，1080×1920、30fps，包含片头片尾、中文旁白与字幕，以及 31 处动作音效，采用深色荧光绿、四面体变形和文字动效。交付文件位于 deliveries/zzzxc-homepage-opus-motion-20261003/，包括 video.mp4、cover-3x4.png、cover-4x3.png、publish.json，四文件交付校验通过，关键帧已检查；完整动效与试听尚未人工验收。"
@@ -11434,7 +11434,7 @@
         "Next.js, Docker, GLB, Python"
       ],
       "work": [
-        "【ai-video-studio】用 VoxCPM 生成了一条语音克隆 WAV（参考音频 voices/f5-tts/noobli/ref.m4a），并创建了 repo-local skill `ai-video-studio-voxcpm-expression-workflow`，专注表达状态和非语言标签写法",
+        "【ai-video-studio】用 VoxCPM 生成了一条语音克隆 WAV（参考音频 voices/f5-tts/AXMORF/ref.m4a），并创建了 repo-local skill `ai-video-studio-voxcpm-expression-workflow`，专注表达状态和非语言标签写法",
         "【Blender + Three.js】在 Blender 中用 BlendExchange 下载的 Human Base Mesh Male 模型搭建了完整骨骼绑定 + WalkCycle/Wave 动画，导出为 GLB (137KB) 并验证可直接用于 Three.js",
         "【dom-webgl-workspace Phase 9】修复了 physics pointerDrag 语义：从“拖拽期间施加 spring force”改为“直接 2D 操控物体、松开后恢复物理带惯性”；完善 dogfood 页面，新增碰撞/惯性演示对象",
         "【dom-webgl-workspace Phase 7】将 dogfood 动画模型从 Sprint.glb (9.9MB) 换成 human_male_base.glb (137KB)，调整动画策略为：pin + scrub 控制 WalkCycle，弃用 Wave",
@@ -14996,7 +14996,7 @@
         "~/.profile 中残留 macOS PATH (~/..., /Applications/iTerm.app/...) 覆盖了 Linux 正常 PATH，导致 hermes/codex/npm 在某些 shell 入口下找不到。删除了错误的 PATH 覆盖，调整了 CARGO_HOME，问题已验证修复。",
         "建立本地索引体系",
         "在 ~/agent-workspace/remote-hosts/mypc/ 下建立了一整套 operator notes：",
-        "ROLE-BOUNDARIES.md — 角色边界定义（m-hermes / noobli / ubuntu / u-hermes）",
+        "ROLE-BOUNDARIES.md — 角色边界定义（m-hermes / AXMORF / ubuntu / u-hermes）",
         "OPS-CONTROL-PLANE.md — 运维控制面入口（英文，非人称）",
         "paths-and-locations.md — 远端稳定路径总表",
         "remote-control-sop.md — 运维 SOP",

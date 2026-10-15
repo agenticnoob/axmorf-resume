@@ -32,7 +32,7 @@ async function fixture() {
       timeline_event: '完成线上同步',
       body: {
         今天用了啥: ['TypeScript'],
-        干了啥: ['在 /home/private/project 为徐力完成 127.0.0.1 验证'],
+        干了啥: ['在 /home/test-user/project 为合成用户完成 192.0.2.8 验证'],
         可写进简历的一件事: '完成确定性数据发布',
       },
     }),
@@ -69,7 +69,7 @@ test('buildPublicSnapshots projects every public journal and skill field', async
   assert.equal(result.manifest.journal.entryCount, 1)
   assert.equal(journal.entries[0].sessionCount, 2)
   assert.equal(journal.entries[0].skillsTouched[0].count, 3)
-  assert.equal(journal.entries[0].work[0], '在 ~/project 为AXMORF完成 [private-ip] 验证')
+  assert.equal(journal.entries[0].work[0], '在 ~/project 为合成用户完成 [private-ip] 验证')
   assert.deepEqual(skills.skills[0], {
     id: 'typescript',
     name: 'TypeScript',
@@ -108,10 +108,11 @@ test('timeline disagreement fails closed', async (t) => {
   )
 })
 
-test('redactPublicText removes public identity and machine-specific locations', () => {
+test('redactPublicText removes synthetic identity and machine-specific locations', () => {
   assert.equal(
     redactPublicText(
-      '徐力 /Users/private/code /data/projects/repos/private ssh zzzxc@192.168.1.8',
+      '合成姓名 /Users/test-user/code /data/projects/repos/private ssh demo@192.0.2.8',
+      ['合成姓名'],
     ),
     'AXMORF ~/code [local-path] ssh [private-host]',
   )

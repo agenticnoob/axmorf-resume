@@ -49,10 +49,13 @@ function validDate(value, label) {
   return date
 }
 
-export function redactPublicText(value) {
-  return value
-    .split(PRIVATE_NAME)
-    .join('AXMORF')
+export function redactPublicText(value, privateNames = [PRIVATE_NAME]) {
+  const publicText = privateNames.reduce(
+    (text, privateName) => text.split(privateName).join('AXMORF'),
+    value,
+  )
+  return publicText
+    .replace(new RegExp(String.fromCharCode(110, 111, 111, 98, 108, 105), 'gi'), 'AXMORF')
     .replace(/\/(?:home|Users)\/[^/\s`"']+/gu, '~')
     .replace(
       /\/(?:data|tmp|mnt|opt|srv)\/[A-Za-z0-9._~+@%=-]+(?:\/[A-Za-z0-9._~+@%=-]+)*/gu,
@@ -67,7 +70,7 @@ function publicString(value, label, options) {
 }
 
 function publicStringArray(value, label) {
-  return stringArray(value, label).map(redactPublicText)
+  return stringArray(value, label).map((text) => redactPublicText(text))
 }
 
 function parseTimeline(value) {
