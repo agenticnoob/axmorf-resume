@@ -2,10 +2,100 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "6dca26567b3f4bccce465d50db42140aa33b0501",
-    "generatedAt": "2026-10-15T00:12:45.365186+09:00"
+    "revision": "c082eebc1785107509de80bb835a6e6b71468fe1",
+    "generatedAt": "2026-10-16T00:06:16.679287+09:00"
   },
   "entries": [
+    {
+      "date": "2026-10-15",
+      "sessionCount": 4,
+      "turnCount": 22,
+      "skillsTouched": [
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 3
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "category": "runtime",
+          "count": 3
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 2
+        },
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 2
+        },
+        {
+          "id": "edgetts",
+          "name": "Edge TTS",
+          "category": "ai-provider",
+          "count": 4
+        },
+        {
+          "id": "nodeedgetts",
+          "name": "node-edge-tts",
+          "category": "library",
+          "count": 2
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "websocket",
+          "name": "WebSocket",
+          "category": "protocol",
+          "count": 3
+        },
+        {
+          "id": "httpsproxyagent",
+          "name": "https-proxy-agent",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "zsh",
+          "name": "Zsh",
+          "category": "shell",
+          "count": 1
+        },
+        {
+          "id": "mp3",
+          "name": "MP3",
+          "category": "format",
+          "count": 1
+        }
+      ],
+      "timelineEvent": "完成 AXMORF Studio Edge TTS 429 问题的隔离诊断（5/5 次低频请求全部成功），并在源码仓库实现请求间隔与脱敏日志，108 项离线回归通过。",
+      "tools": [
+        "TypeScript / Node.js 源码仓库（~/projects/axmorf-studio）",
+        "AXMORF Studio Workspace 与 axmorf-film 技能（Remotion 影片制作流程）",
+        "Edge TTS（node-edge-tts@1.2.11，WebSocket 握手与 GEC token）",
+        "上游 Python edge-tts 7.3.1 常量与 drm 实现对照",
+        "https-proxy-agent 代理 CONNECT 行为核对",
+        "npm 脚本、类型检查、lint、格式与文档链接检查"
+      ],
+      "work": [
+        "每日 AI 视频选题与发布流程（we-media 自动化）：读取了 we-media 与 AXMORF 两个项目的 AGENTS.md 及操作指南，任务要求从 ChatGPT「AI认知工程」项目选题、制作 90–150 秒视频并发布到小红书、抖音、B站。日志中未出现该流程的实际执行结果或发布记录，无法确认有作品完成制作或发布。",
+        "DNS 科普竖屏视频制作（AXMORF）：确定核心结论为「DNS 查域名对应 IP，先查缓存，没有再逐级问路，浏览器拿到 IP 后连接服务器」，设计了地址栏特写、查询光路、根/顶级域/权威服务器、IP 返回点亮网页的连续空间，采用深蓝机房、青色光路、橙色答案的视觉方案，配乐从稀疏电子脉冲加速到找到 IP 时落重音。已保存分镜构思 DIRECTION.md 与中文旁白稿 film.json，环境检查通过。但 TTS 两次失败：首次 s01 报 WebSocket handshake HTTP 429，用户授权重试后 s04 再次 429。未生成旁白、配乐、审片联系表、视频与封面，因此没有审片修改和关键帧可报告。",
+        "Edge TTS 429 根因排查：核对本地 node_modules 中 node-edge-tts@1.2.11 实际代码，确认使用 Chromium 143.0.3650.75、5 分钟窗口 SHA-256 生成 64 位 hex 的 GEC v1 token，每次调用新建 WebSocket。对照上游 Python edge-tts 7.3.1，Chromium 常量相同但版本前缀改为 2-、token 改为 16+64 hex 的 v2 格式。结合 2026-10-13 端点迁移记录（约 26 秒内 10 段成功、第 11 段 429、补做 5 段成功），判断短时节流为主要假设，协议落后确实存在但未证明导致 429，代理/出口 IP 限制未排除。",
+        "隔离诊断（用户确认后执行）：最多 5 次真实请求，初始冷却 14 分 22 秒，请求间隔 137.2/185.3/184.5/148.8 秒，全部成功，未复现 429。覆盖当前 API+v1 代理、当前 API+v1 直连、Bing+v2 代理、Bing+v2 直连、当前 API+v2 代理五种组合，CONNECT 均 200、WebSocket 均 101，五段 MP3 均完整解码。代理与直连分别落到 SG2、TYO 不同节点。诊断脚本与日志放在临时目录，生产源码与依赖未改动。",
+        "源码修复实现：在 ~/projects/axmorf-studio 的 scripts/narration/adapters/edge-tts-client.ts 中实现同一适配器串行请求、前次结束后至少间隔 10 秒、首句与缓存命中不等待、失败即停不重试不 fallback，并增加脱敏的时间/路由/状态日志。定向测试 16 项通过，扩展离线回归 108 项全部通过，类型检查、lint、格式和文档链接检查通过。改动未提交、未发布，未更新已安装 Workspace，10 秒初值的实际缓解效果仍待真实生产验证。"
+      ],
+      "resumeHighlight": "主导 AXMORF Studio Edge TTS 频繁 429 的根因定位：通过对照本地 node-edge-tts 与上游 Python edge-tts 的 GEC token 实现、复核历史端点迁移证据，设计并执行 5 次低频隔离诊断（覆盖端点、协议版本与代理/直连路由），确认短时节流为主要假设；随后在源码中实现请求串行化与最小间隔、脱敏日志，108 项离线回归、类型与 lint 检查全部通过。"
+    },
     {
       "date": "2026-10-14",
       "sessionCount": 7,
