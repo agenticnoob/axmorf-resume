@@ -344,7 +344,7 @@
       "subtitle": "双语交互式个人网站",
       "role": "开源项目",
       "stage": "开源项目",
-      "description": "基于 Next.js App Router 构建的双语个人网站，以章节呈现个人介绍、AI 与哲学文章、公开项目、公共频道和每日记录。网站针对桌面、移动、触屏及短横屏提供差异化布局，并提供无需 JavaScript 也可阅读的 Agent HTML、Markdown、站点地图与 llms.txt 入口。",
+      "description": "基于 Next.js App Router 构建的双语个人网站，以章节呈现个人介绍、AI 与哲学文章、公开项目、公共频道和每日记录。网站为桌面端提供 WebGL 交互场景，为移动、触屏及短横屏提供阅读布局，并通过 Agent HTML、Markdown、站点地图与 llms.txt 提供无需 JavaScript 的内容入口。",
       "tech": [
         "TypeScript",
         "Next.js App Router",
@@ -355,10 +355,10 @@
         "GitHub Actions"
       ],
       "highlights": [
-        "共享类型化内容并持久化语言、主题与项目房间状态",
-        "桌面端采用单一 WebGL 场景，阅读布局适配移动、触屏及短横屏",
-        "项目案例支持原生对话框拦截路由与独立页面",
-        "每日记录分页加载，并提供双语 Agent HTML 与 Markdown 内容"
+        "中英文内容共享类型化数据，并持久化语言、主题与项目房间状态",
+        "单一 Canvas 与滚动运行时支持桌面 WebGL 场景和多端阅读布局",
+        "项目案例支持原生对话框拦截路由与可独立访问的详情页",
+        "每日记录按每次 12 天分页加载，并生成双语 Agent HTML 与 Markdown 内容"
       ],
       "links": [
         {
@@ -369,7 +369,7 @@
       "github": {
         "repositoryId": 1366880001,
         "fullName": "agenticnoob/hero-next",
-        "fingerprint": "e88d8815488412d852960ca82f4754756da13d2be7754e61c9490451fb9691b8"
+        "fingerprint": "aefc32ef8938b85c63a62b4a920ce1712f35a9264aef379abaad05ac291fe331"
       }
     }
   ]
