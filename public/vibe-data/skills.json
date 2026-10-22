@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "2b71ca8a46cce4bf60b1251718d3c5c47e74628d",
-    "generatedAt": "2026-10-21T00:07:05.990432+09:00"
+    "revision": "05dfd08dcd42164d792fd1f2311676a2a0bfceb6",
+    "generatedAt": "2026-10-22T14:02:53.054728+09:00"
   },
   "skills": [
     {
@@ -160,15 +160,6 @@
       "lastSeen": "2026-10-13"
     },
     {
-      "id": "axmorf",
-      "name": "AXMORF",
-      "category": "tool",
-      "dayCount": 1,
-      "totalCount": 1,
-      "firstSeen": "2026-10-19",
-      "lastSeen": "2026-10-19"
-    },
-    {
       "id": "axmorfvideo",
       "name": "axmorf-video",
       "category": "ai-coding-tool",
@@ -199,10 +190,10 @@
       "id": "bilibili",
       "name": "Bilibili",
       "category": "domain",
-      "dayCount": 2,
-      "totalCount": 6,
+      "dayCount": 3,
+      "totalCount": 7,
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-05"
+      "lastSeen": "2026-10-20"
     },
     {
       "id": "blender",
@@ -221,6 +212,15 @@
       "totalCount": 2,
       "firstSeen": "2026-07-05",
       "lastSeen": "2026-07-05"
+    },
+    {
+      "id": "browsercheck",
+      "name": "browser-check.mjs",
+      "category": "tool",
+      "dayCount": 1,
+      "totalCount": 1,
+      "firstSeen": "2026-10-17",
+      "lastSeen": "2026-10-17"
     },
     {
       "id": "cannones",
@@ -271,28 +271,28 @@
       "id": "chromium",
       "name": "Chromium",
       "category": "tool",
-      "dayCount": 18,
-      "totalCount": 51,
+      "dayCount": 19,
+      "totalCount": 52,
       "firstSeen": "2026-06-28",
-      "lastSeen": "2026-10-14"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "claude",
       "name": "Claude",
       "category": "ai-model",
-      "dayCount": 2,
-      "totalCount": 3,
+      "dayCount": 5,
+      "totalCount": 12,
       "firstSeen": "2026-07-05",
-      "lastSeen": "2026-10-20"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "claude-code",
       "name": "Claude Code",
       "category": "ai-coding-tool",
-      "dayCount": 2,
-      "totalCount": 3,
+      "dayCount": 3,
+      "totalCount": 5,
       "firstSeen": "2026-09-16",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-10-18"
     },
     {
       "id": "claudeopus55",
@@ -361,10 +361,10 @@
       "id": "codex",
       "name": "Codex CLI",
       "category": "ai-coding-tool",
-      "dayCount": 38,
-      "totalCount": 213,
+      "dayCount": 42,
+      "totalCount": 225,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-20"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "comfyui",
@@ -467,7 +467,7 @@
     },
     {
       "id": "deepseekv4flash",
-      "name": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
       "category": "ai-model",
       "dayCount": 1,
       "totalCount": 1,
@@ -523,10 +523,10 @@
       "id": "douyin",
       "name": "Douyin",
       "category": "domain",
-      "dayCount": 2,
-      "totalCount": 6,
+      "dayCount": 3,
+      "totalCount": 7,
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-05"
+      "lastSeen": "2026-10-20"
     },
     {
       "id": "dpkg",
@@ -550,19 +550,19 @@
       "id": "drei",
       "name": "Drei",
       "category": "library",
-      "dayCount": 1,
-      "totalCount": 4,
+      "dayCount": 2,
+      "totalCount": 7,
       "firstSeen": "2026-10-14",
-      "lastSeen": "2026-10-14"
+      "lastSeen": "2026-10-18"
     },
     {
       "id": "edgetts",
       "name": "Edge TTS",
       "category": "ai-provider",
-      "dayCount": 5,
-      "totalCount": 12,
+      "dayCount": 7,
+      "totalCount": 13,
       "firstSeen": "2026-08-24",
-      "lastSeen": "2026-10-15"
+      "lastSeen": "2026-10-20"
     },
     {
       "id": "editorconfig",
@@ -676,10 +676,10 @@
       "id": "ffmpeg",
       "name": "FFmpeg",
       "category": "tool",
-      "dayCount": 51,
-      "totalCount": 161,
+      "dayCount": 53,
+      "totalCount": 163,
       "firstSeen": "2026-06-26",
-      "lastSeen": "2026-10-16"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "ffprobe",
@@ -730,28 +730,28 @@
       "id": "git",
       "name": "Git",
       "category": "vcs",
-      "dayCount": 104,
-      "totalCount": 488,
+      "dayCount": 108,
+      "totalCount": 498,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-20"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "github",
       "name": "GitHub",
       "category": "vcs-host",
-      "dayCount": 12,
-      "totalCount": 31,
+      "dayCount": 13,
+      "totalCount": 32,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-15"
     },
     {
       "id": "githubactions",
       "name": "GitHub Actions",
       "category": "tool",
-      "dayCount": 29,
-      "totalCount": 127,
+      "dayCount": 31,
+      "totalCount": 130,
       "firstSeen": "2026-06-10",
-      "lastSeen": "2026-10-14"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "githubapi",
@@ -802,10 +802,10 @@
       "id": "glb",
       "name": "GLB",
       "category": "format",
-      "dayCount": 10,
-      "totalCount": 39,
+      "dayCount": 9,
+      "totalCount": 36,
       "firstSeen": "2026-07-05",
-      "lastSeen": "2026-10-16"
+      "lastSeen": "2026-09-13"
     },
     {
       "id": "glsl",
@@ -820,10 +820,10 @@
       "id": "gltf",
       "name": "GLTF",
       "category": "format",
-      "dayCount": 3,
-      "totalCount": 6,
+      "dayCount": 4,
+      "totalCount": 8,
       "firstSeen": "2026-07-02",
-      "lastSeen": "2026-07-06"
+      "lastSeen": "2026-10-16"
     },
     {
       "id": "googleantigravity",
@@ -901,10 +901,10 @@
       "id": "gpt61sol",
       "name": "GPT-6.1 Sol",
       "category": "ai-model",
-      "dayCount": 3,
-      "totalCount": 6,
+      "dayCount": 5,
+      "totalCount": 8,
       "firstSeen": "2026-09-30",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-16"
     },
     {
       "id": "gpt6astra",
@@ -1024,15 +1024,6 @@
       "lastSeen": "2026-10-11"
     },
     {
-      "id": "httpsproxyagent",
-      "name": "https-proxy-agent",
-      "category": "library",
-      "dayCount": 1,
-      "totalCount": 1,
-      "firstSeen": "2026-10-15",
-      "lastSeen": "2026-10-15"
-    },
-    {
       "id": "huggingface",
       "name": "HuggingFace",
       "category": "ai-provider",
@@ -1090,10 +1081,10 @@
       "id": "javascript",
       "name": "JavaScript",
       "category": "language",
-      "dayCount": 27,
-      "totalCount": 145,
+      "dayCount": 29,
+      "totalCount": 152,
       "firstSeen": "2026-07-05",
-      "lastSeen": "2026-10-13"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "jdk",
@@ -1312,15 +1303,6 @@
       "lastSeen": "2026-07-02"
     },
     {
-      "id": "mp3",
-      "name": "MP3",
-      "category": "format",
-      "dayCount": 1,
-      "totalCount": 1,
-      "firstSeen": "2026-10-15",
-      "lastSeen": "2026-10-15"
-    },
-    {
       "id": "mp4",
       "name": "MP4",
       "category": "format",
@@ -1342,10 +1324,10 @@
       "id": "nextjs",
       "name": "Next.js",
       "category": "framework",
-      "dayCount": 37,
-      "totalCount": 140,
+      "dayCount": 38,
+      "totalCount": 141,
       "firstSeen": "2026-05-26",
-      "lastSeen": "2026-10-14"
+      "lastSeen": "2026-10-17"
     },
     {
       "id": "nginx",
@@ -1360,28 +1342,28 @@
       "id": "nodeedgetts",
       "name": "node-edge-tts",
       "category": "library",
-      "dayCount": 2,
-      "totalCount": 5,
+      "dayCount": 1,
+      "totalCount": 3,
       "firstSeen": "2026-10-13",
-      "lastSeen": "2026-10-15"
+      "lastSeen": "2026-10-13"
     },
     {
       "id": "nodejs",
       "name": "Node.js",
       "category": "runtime",
-      "dayCount": 87,
-      "totalCount": 405,
+      "dayCount": 88,
+      "totalCount": 410,
       "firstSeen": "2026-05-18",
-      "lastSeen": "2026-10-15"
+      "lastSeen": "2026-10-19"
     },
     {
       "id": "npm",
       "name": "npm",
       "category": "package-manager",
-      "dayCount": 97,
-      "totalCount": 528,
+      "dayCount": 102,
+      "totalCount": 545,
       "firstSeen": "2026-06-05",
-      "lastSeen": "2026-10-15"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "numpy",
@@ -1564,22 +1546,13 @@
       "lastSeen": "2026-10-03"
     },
     {
-      "id": "orca",
-      "name": "Orca",
-      "category": "tool",
+      "id": "opus55",
+      "name": "Opus 5.5",
+      "category": "ai-model",
       "dayCount": 1,
       "totalCount": 1,
-      "firstSeen": "2026-10-20",
-      "lastSeen": "2026-10-20"
-    },
-    {
-      "id": "orcacli",
-      "name": "orca-cli",
-      "category": "tool",
-      "dayCount": 1,
-      "totalCount": 1,
-      "firstSeen": "2026-10-19",
-      "lastSeen": "2026-10-19"
+      "firstSeen": "2026-10-16",
+      "lastSeen": "2026-10-16"
     },
     {
       "id": "pcm",
@@ -1621,10 +1594,10 @@
       "id": "playwright",
       "name": "Playwright",
       "category": "tool",
-      "dayCount": 39,
-      "totalCount": 99,
+      "dayCount": 41,
+      "totalCount": 104,
       "firstSeen": "2026-05-20",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-19"
     },
     {
       "id": "png",
@@ -1723,7 +1696,7 @@
       "dayCount": 47,
       "totalCount": 174,
       "firstSeen": "2026-05-17",
-      "lastSeen": "2026-10-19"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "pytorch",
@@ -1783,10 +1756,10 @@
       "id": "react",
       "name": "React",
       "category": "framework",
-      "dayCount": 88,
-      "totalCount": 519,
+      "dayCount": 91,
+      "totalCount": 502,
       "firstSeen": "2026-05-20",
-      "lastSeen": "2026-10-19"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "reactdoctor",
@@ -1807,20 +1780,11 @@
       "lastSeen": "2026-09-20"
     },
     {
-      "id": "reactthreedrei",
-      "name": "@react-three/drei",
-      "category": "library",
-      "dayCount": 1,
-      "totalCount": 28,
-      "firstSeen": "2026-10-19",
-      "lastSeen": "2026-10-19"
-    },
-    {
       "id": "reactthreefiber",
       "name": "React Three Fiber",
       "category": "library",
-      "dayCount": 6,
-      "totalCount": 49,
+      "dayCount": 8,
+      "totalCount": 28,
       "firstSeen": "2026-06-04",
       "lastSeen": "2026-10-19"
     },
@@ -1828,10 +1792,10 @@
       "id": "remotion",
       "name": "Remotion",
       "category": "framework",
-      "dayCount": 78,
-      "totalCount": 595,
+      "dayCount": 81,
+      "totalCount": 600,
       "firstSeen": "2026-05-26",
-      "lastSeen": "2026-10-15"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "repositorydispatch",
@@ -1850,6 +1814,15 @@
       "totalCount": 1,
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-11"
+    },
+    {
+      "id": "rollup",
+      "name": "Rollup",
+      "category": "build-tool",
+      "dayCount": 1,
+      "totalCount": 1,
+      "firstSeen": "2026-10-17",
+      "lastSeen": "2026-10-17"
     },
     {
       "id": "rsp",
@@ -1942,22 +1915,13 @@
       "lastSeen": "2026-10-20"
     },
     {
-      "id": "sensenova68flashlite",
-      "name": "sensenova-6.8-flash-lite",
-      "category": "ai-model",
-      "dayCount": 1,
-      "totalCount": 1,
-      "firstSeen": "2026-10-20",
-      "lastSeen": "2026-10-20"
-    },
-    {
       "id": "sha256",
       "name": "SHA-256",
       "category": "tool",
-      "dayCount": 4,
-      "totalCount": 12,
+      "dayCount": 3,
+      "totalCount": 11,
       "firstSeen": "2026-08-29",
-      "lastSeen": "2026-10-16"
+      "lastSeen": "2026-09-30"
     },
     {
       "id": "sha256sum",
@@ -2086,6 +2050,15 @@
       "lastSeen": "2026-10-13"
     },
     {
+      "id": "swiftshader",
+      "name": "SwiftShader",
+      "category": "tool",
+      "dayCount": 1,
+      "totalCount": 1,
+      "firstSeen": "2026-10-19",
+      "lastSeen": "2026-10-19"
+    },
+    {
       "id": "swiper",
       "name": "Swiper",
       "category": "library",
@@ -2161,8 +2134,8 @@
       "id": "threejs",
       "name": "Three.js",
       "category": "library",
-      "dayCount": 48,
-      "totalCount": 264,
+      "dayCount": 50,
+      "totalCount": 244,
       "firstSeen": "2026-06-04",
       "lastSeen": "2026-10-19"
     },
@@ -2215,19 +2188,19 @@
       "id": "typescript",
       "name": "TypeScript",
       "category": "language",
-      "dayCount": 132,
-      "totalCount": 1068,
+      "dayCount": 135,
+      "totalCount": 1058,
       "firstSeen": "2026-05-17",
-      "lastSeen": "2026-10-19"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "ubuntu",
       "name": "Ubuntu",
       "category": "os",
-      "dayCount": 9,
-      "totalCount": 35,
+      "dayCount": 8,
+      "totalCount": 34,
       "firstSeen": "2026-05-31",
-      "lastSeen": "2026-10-20"
+      "lastSeen": "2026-10-02"
     },
     {
       "id": "ufw",
@@ -2296,10 +2269,10 @@
       "id": "viseloradomwebgl",
       "name": "@viselora/dom-webgl",
       "category": "library",
-      "dayCount": 3,
-      "totalCount": 37,
+      "dayCount": 1,
+      "totalCount": 3,
       "firstSeen": "2026-07-12",
-      "lastSeen": "2026-10-19"
+      "lastSeen": "2026-07-12"
     },
     {
       "id": "viselorascrolladapters",
@@ -2324,18 +2297,18 @@
       "name": "Vite",
       "category": "build-tool",
       "dayCount": 40,
-      "totalCount": 127,
+      "totalCount": 100,
       "firstSeen": "2026-05-20",
-      "lastSeen": "2026-10-19"
+      "lastSeen": "2026-10-21"
     },
     {
       "id": "vitest",
       "name": "Vitest",
       "category": "tool",
-      "dayCount": 23,
-      "totalCount": 81,
+      "dayCount": 25,
+      "totalCount": 84,
       "firstSeen": "2026-06-07",
-      "lastSeen": "2026-09-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "id": "voxcpm",
@@ -2368,10 +2341,10 @@
       "id": "webgl",
       "name": "WebGL",
       "category": "library",
-      "dayCount": 38,
-      "totalCount": 178,
+      "dayCount": 39,
+      "totalCount": 179,
       "firstSeen": "2026-06-09",
-      "lastSeen": "2026-10-16"
+      "lastSeen": "2026-10-19"
     },
     {
       "id": "webp",
@@ -2396,7 +2369,7 @@
       "name": "WebSocket",
       "category": "protocol",
       "dayCount": 3,
-      "totalCount": 7,
+      "totalCount": 6,
       "firstSeen": "2026-08-31",
       "lastSeen": "2026-10-15"
     },
@@ -2431,10 +2404,10 @@
       "id": "xiaohongshu",
       "name": "Xiaohongshu",
       "category": "domain",
-      "dayCount": 2,
-      "totalCount": 6,
+      "dayCount": 3,
+      "totalCount": 7,
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-05"
+      "lastSeen": "2026-10-20"
     },
     {
       "id": "xrdp",
@@ -2497,7 +2470,7 @@
       "dayCount": 9,
       "totalCount": 20,
       "firstSeen": "2026-08-29",
-      "lastSeen": "2026-10-15"
+      "lastSeen": "2026-10-18"
     },
     {
       "id": "zustand",

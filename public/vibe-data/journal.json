@@ -2,15 +2,130 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "2b71ca8a46cce4bf60b1251718d3c5c47e74628d",
-    "generatedAt": "2026-10-21T00:07:05.990432+09:00"
+    "revision": "05dfd08dcd42164d792fd1f2311676a2a0bfceb6",
+    "generatedAt": "2026-10-22T14:02:53.054728+09:00"
   },
   "entries": [
     {
-      "date": "2026-10-20",
-      "sessionCount": 5,
-      "turnCount": 35,
+      "date": "2026-10-21",
+      "sessionCount": 8,
+      "turnCount": 52,
       "skillsTouched": [
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "javascript",
+          "name": "JavaScript",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 1
+        },
+        {
+          "id": "vite",
+          "name": "Vite",
+          "category": "build-tool",
+          "count": 1
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 1
+        },
+        {
+          "id": "githubactions",
+          "name": "GitHub Actions",
+          "category": "ci",
+          "count": 1
+        },
+        {
+          "id": "claude",
+          "name": "Claude",
+          "category": "ai-model",
+          "count": 1
+        },
+        {
+          "id": "codex",
+          "name": "Codex CLI",
+          "category": "ai-coding-tool",
+          "count": 1
+        },
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "category": "tool",
+          "count": 1
+        },
+        {
+          "id": "chromium",
+          "name": "Chromium",
+          "category": "runtime",
+          "count": 1
+        }
+      ],
+      "timelineEvent": "axmorf-studio 完成 contracts 旧主链清理与 Vite 安全修复，发布 v0.3.0-rc.3 至 npm next，并启动晋级验收。",
+      "tools": [
+        "TypeScript / JavaScript（axmorf-studio 合同清理与测试）",
+        "Python 3.9.6（orca-flow-demo 乘法 bug 修复与回归测试）",
+        "npm（依赖审计、发布 @axmorf/studio@0.3.0-rc.3）",
+        "Vite（8.2.2 → 8.2.4 安全升级）",
+        "Git（分支、提交、tag 推送）",
+        "GitHub Actions（发布 workflow 与 macOS 门禁）",
+        "Claude / Codex（编排流程验证与执行）",
+        "Remotion / React（axmorf-studio 渲染与审片）",
+        "FFmpeg（we-media 视频混音与编码）",
+        "Chromium（Remotion 宿主 compositions 门禁）"
+      ],
+      "work": [
+        "【axmorf-studio】完成 contracts 旧主链清理（0.3.0 breaking 变更）：删除 story、semantic-timing、scene-readability、generation-input、generated-artwork、render 六个模块，公开导出去掉 122 个名称；contracts 类型声明从 5328 行降至 2692 行，JS 从 4505 行降至 2202 行。字幕 72 half-units 计数移入 film.ts 仍从 contracts 导出，旁白停顿换算移入旁白脚本内部不再导出，计算逻辑未变。@axmorf/studio/remotion 导出、依赖、版本未动。测试从 330 项降至 328 项，完整 npm run check 328/328 通过。Codex 首轮出现 300ms 进程启动超时，单独重跑和第二轮完整检查均通过，判定为偶发、与改动无关，未修改测试。先形成本地提交 fd9ef67（清理 contracts 旧主链残留）；后续合并、发布与验收状态见下文。",
+        "【axmorf-studio】完成 Vite 安全修复（分支 axmorf/vite-audit-fix）：因 vite 8.2.2 存在 launch-editor 安全公告（GHSA-698v-4r3x-3vcv、GHSA-r825-w8mm-5pxw、GHSA-587h-7wmj-h5pm，受影响 8.2.0-8.2.3），将精确 devDependency vite 从 8.2.2 升至 8.2.4，修改 /package.json、/packages/studio/package.json 及 package-lock.json。@vitejs/plugin-react 保持 6.0.5（peer 范围支持 8.2.4）。npm audit --audit-level=low 返回 found 0 vulnerabilities，退出码 0；锁文件仅 Vite 版本变化，无传递依赖变更。完整 npm run check 通过：328 项测试、typecheck、lint、Web/Remotion 构建及宿主 Chromium compositions 门禁均成功；最终差异 3 个文件、7 行增删。",
+        "【axmorf-studio】发布 v0.3.0-rc.3：PR #14 已合并，v0.3.0-rc.3 tag 推送，发布 workflow 和 macOS 门禁（此前因 npm audit 失败）均通过。最终确认 @axmorf/studio 与 create-axmorf-studio 两个包的 next 均为 0.3.0-rc.3，latest 仍为 0.2.1。晋级验收进行中：用 npm 0.2.1 创建验收 Workspace，升级到 next 后 Codex 开始制作视频，预计 30–60 分钟。尚未验证：真实 Edge TTS、成片交付、新建或升级 Workspace 的完整流程。用户已授权'全部落地'；rc.2 验收时曾计划调用真实 Edge TTS，失败则停下询问——此规则延续至 rc.3 验收。",
+        "【Orca 启动配置】完成 Orca 内启动 Claude 的自动编排：改用 Claude SessionStart 启动钩子，先核验 Orca 会话身份（ORCA_TERMINAL_HANDLE、ORCA_PANE_KEY、ORCA_WORKTREE_PATH 环境变量）和工作区，再注入'Claude 规划、Codex 执行'指令；移除旧模糊条件规则。保留现有 Orca 状态回报功能；新建、恢复、清空或压缩会话时重新检测。检测脚本通过 20 项测试；真实 Orca 终端核验成功，普通终端同目录不触发。用隔离小任务验证自动派发：Claude 自动写计划并派 Codex 执行。",
+        "【orca-flow-demo】修复 startup_multiply.py 乘法 bug：`return a + b` 改为 `return a * b`；补零值和负数回归测试（test_zero、test_negative）。Python 3.9.6 定向测试 3 项 OK，全量 6 项 OK；修复前 test_positive 报 `7 != 12`。仅改两个文件；哈希确认其余 26 文件未变；__pycache__ 无新增；未提交、未推送。派发时 Orca 返回 outcome_unknown（30 秒未确认开始），Claude 查看终端确认已在工作，未重复派发。Claude 独立复核通过，释放 worker；计划存于 .orca/plans/fix-startup-multiply.md，结果报告 fix-startup-multiply.result.json。",
+        "【we-media 每日 AI 视频】今日视频《写得更好，却越来越像》制作并提交三平台，均在审核中。栏目：AI认知与哲思；旧公理：'个人更有创意，整体就更多样'。来源：UCL 2024 原始实验、arXiv 2504.13868v2。成片：135.13 秒、1080×1920、30fps；混音 −15.9 LUFS、峰值 −2.3 dBFS。作品 ID：小红书 6ad8050d000000002c017b0c；抖音 7698909426148773171；B站 BV1Muni6vEP7。昨日作品三平台均已公开，D1 数据已采集（小红书 16 播放/1 赞；抖音 48 播放/2 赞/1 收藏；B站 4 播放/1 评论）。验证边界：未完成实际听审与全片连续观看。",
+        "【vibe-journal-pipeline】确认远程连接失败时忽略远程日志：记录警告并跳过该来源，本地日志正常时仍生成日报。最近无远程工作，无记录需补回。任务失败主因是模型输出和推送冲突，远程连接失败只是警告。",
+        "【oker 编排配置】确认编排只在 Orca 终端生效：默认行为是'Orca 工作区中的 Claude 会话'才走'Claude 规划 → Codex 执行 → Claude 核验'编排。普通终端不默认启用；明确调用 /orca-plan-execute 且 Orca 运行中也可接入。机制：Orca 启动终端时注入环境变量、Shell 包装脚本和 Hooks；全局 CLAUDE.md 含条件指令。无程序级强制拦截，靠 Claude 读取规则遵循。"
+      ],
+      "resumeHighlight": "在 axmorf-studio 中主导完成 0.3.0 破坏性版本的关键工程：清理约 3000 行旧主链合同（删除 6 个模块、公开导出去掉 122 个名称，contracts 类型声明从 5328 行降至 2692 行），修复 Vite 8.2.2 安全公告（升级至 8.2.4，npm audit 0 漏洞），并发布 v0.3.0-rc.3 至 npm next，全程 328 项测试、typecheck、lint、构建及 Chromium 门禁全部通过。"
+    },
+    {
+      "date": "2026-10-20",
+      "sessionCount": 7,
+      "turnCount": 43,
+      "skillsTouched": [
+        {
+          "id": "edgetts",
+          "name": "Edge TTS",
+          "category": "tool",
+          "count": 1
+        },
         {
           "id": "sensenova",
           "name": "SenseNova",
@@ -19,13 +134,7 @@
         },
         {
           "id": "deepseekv4flash",
-          "name": "deepseek-v4-flash",
-          "category": "ai-model",
-          "count": 1
-        },
-        {
-          "id": "sensenova68flashlite",
-          "name": "sensenova-6.8-flash-lite",
+          "name": "DeepSeek V4 Flash",
           "category": "ai-model",
           "count": 1
         },
@@ -42,76 +151,500 @@
           "count": 1
         },
         {
-          "id": "ubuntu",
-          "name": "Ubuntu",
-          "category": "os",
+          "id": "douyin",
+          "name": "抖音",
+          "category": "platform",
           "count": 1
         },
         {
-          "id": "orca",
-          "name": "Orca",
-          "category": "tool",
+          "id": "xiaohongshu",
+          "name": "小红书",
+          "category": "platform",
           "count": 1
         },
         {
-          "id": "claude",
-          "name": "Claude",
-          "category": "ai-model",
+          "id": "bilibili",
+          "name": "B站",
+          "category": "platform",
           "count": 1
+        }
+      ],
+      "timelineEvent": "AXMORF Studio 为 film:review 增加字号、越界和字幕遮挡三类可读性提示，330 项测试通过；完成当日 AI 视频制作与三平台提交。",
+      "tools": [
+        "Edge TTS（旁白生成，遇 429 限流后经用户同意重试）",
+        "SenseNova sensenova-6.8-flash-lite（定时任务模型，因截断弃用）",
+        "DeepSeek deepseek-v4-flash（定时任务切换后的模型）",
+        "Git（推送失败处理、远端同步与合并）",
+        "SSH（远程数据源连接，mypc 连接被关闭）",
+        "抖音、小红书、B站（视频发布平台）"
+      ],
+      "work": [
+        "【AXMORF Studio 审片可读性】完成 film:review 首批实测文字可读性检查，新增字号过小、画面越界和字幕框遮挡三类 readabilityWarnings，均按交付分辨率计算；覆盖缩放后的文字与 SVG 文字，同一处文字跨帧合并提示，并用 missingFrames 明确标记未测帧。提示不拦截 film:check 或交付。最终工作树完整 npm run check 330 项测试通过（改动前 320 项），宿主 compositions 检查通过。临时无旁白片真实渲染验证了小字号、越界与正常文字，审片和正片同帧像素逐字节一致，临时片已清理。字幕遮挡仅有单元测试，尚无带旁白真实渲染；全新 Workspace 验收、对比度与停留时长仍未完成。Skill 与模板镜像、架构和状态文档同步；0.3.0 正式版尚未发布。",
+        "自媒体视频自动化（codex:we-media）：制作并发布栏目「AI认知与哲思」视频《别把AI的赞同当证据》，约132秒。旧公理为“多一个赞同，就多一份把握”，来源为 arXiv 2310.13548 原始研究及 OpenAI 官方回滚说明。视觉方案用铜质喇叭与回声管表现“多票赞同来自同一输入”，将“情绪支持”与“独立证据”拆成两条轨道。首次尝试被 Edge TTS HTTP 429 限流阻塞，按技能要求不自动重试，用户同意后重试成功，旁白全部生成。完成密集抽帧检查（六组动作、约0.17秒间隔），未见闪空或文字遮挡，正式 Film 检查零错误零告警。成片 131.7 秒，混音真峰值 −2.2 dBFS，完整音视频解码通过。片尾来源标题年份断行，缩短标题后重新渲染交付。发布结果：抖音已公开（作品 ID 7698597084219411766），小红书审核中（作品 ID 6ad6e8d8000000002701f672），B站审核中（链接 BV1w7nF6WEuC）。验证范围说明：完成抽帧和混音技术检查，未实际完整听音或连续观看。",
+        "定时任务故障排查（vibe-journal-pipeline）：`vibe-journal-daily` 定时任务连续 4 天失败（10/17–10/20），但每天都有触发。根因有三个独立问题：一是模型输出截断，`sensenova-6.8-flash-lite` 忽略 `reasoning_effort=none` 配置，把全部输出额度耗在推理上，不返回正文，提高额度至 32,768 仍截断，实测同平台 `deepseek-v4-flash` 可关闭推理并返回 JSON，已切换；二是 Git 推送失败，10/18 日报已生成并本地提交，但远端有新提交导致推送被拒，已增加生成前同步远端和失败重推逻辑，并阻止夹带无关代码；三是远程数据源连接失败，`mypc` SSH 连接被关闭，无法读取 Hermes/Codex 会话数据，回填使用当时已保存的输入。修复与验证：用户批准将 10/16、17、19 日已保存对话发送至 SenseNova 验证并补回（仅本地生成，不推送）；远端提交已安全合并，本地日报保留；技能排除提示词与验证器精确排除名单已统一；149 项测试通过，153 篇日报全部校验通过，既有日报和私有归档未改动，本次未推送；三天缺失日报（10/16、17、19）已全部补回。",
+        "Orca 咨询（codex:oker）：用户询问 Orca 用法及本质。回答要点：Orca 是管理 AI 开发工作的应用，组织项目/分支/终端/Agent/任务/自动化，实际改代码的是 Claude、Codex 等 Agent。三种实用模式：按任务推进开发、并行独立任务（Worktree）、定时自动化（Automations）。Orca 终端运行的是 Mac 上真实 Shell，与手动终端差别在工作目录、Agent 启动参数、状态跟踪和多任务管理；并排终端不会自动协作，需额外配置规则和技能。建议先采用“手动开发任务 + 每日项目巡检”，稳定后再加自动修复任务。已配置 Claude → Codex 流程：用户提目标 → Claude 调研规划 → Codex 实现测试 → Claude 核验。"
+      ],
+      "resumeHighlight": "为 AXMORF Studio 实现审片帧中文字字号、越界和字幕遮挡三类可读性提示，显式报告未测帧并完成 330 项测试及无旁白片真实渲染验证；同时修复日报模型截断与推送链路问题，切换 deepseek-v4-flash 并补回三天缺失日报。远程 SSH 仍不可达，未将其写成已修复。"
+    },
+    {
+      "date": "2026-10-19",
+      "sessionCount": 132,
+      "turnCount": 622,
+      "skillsTouched": [
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 8
+        },
+        {
+          "id": "javascript",
+          "name": "JavaScript",
+          "category": "language",
+          "count": 6
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "category": "runtime",
+          "count": 5
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 4
+        },
+        {
+          "id": "reactthreefiber",
+          "name": "React Three Fiber",
+          "category": "library",
+          "count": 3
+        },
+        {
+          "id": "threejs",
+          "name": "Three.js",
+          "category": "library",
+          "count": 3
+        },
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 2
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 4
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 3
         },
         {
           "id": "codex",
           "name": "Codex CLI",
           "category": "ai-coding-tool",
+          "count": 2
+        },
+        {
+          "id": "claude",
+          "name": "Claude",
+          "category": "ai-model",
+          "count": 2
+        },
+        {
+          "id": "edgetts",
+          "name": "Edge TTS",
+          "category": "tool",
+          "count": 1
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "category": "tool",
+          "count": 1
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "unittest",
+          "name": "unittest",
+          "category": "tool",
+          "count": 1
+        },
+        {
+          "id": "webgl",
+          "name": "WebGL",
+          "category": "domain",
+          "count": 1
+        },
+        {
+          "id": "playwright",
+          "name": "Playwright",
+          "category": "tool",
+          "count": 1
+        },
+        {
+          "id": "swiftshader",
+          "name": "SwiftShader",
+          "category": "tool",
           "count": 1
         }
       ],
-      "timelineEvent": "修复 vibe-journal-pipeline 定时任务连续失败问题：切换模型至 deepseek-v4-flash 并补回缺失日报。",
+      "timelineEvent": "完成 Viselora 第二轮 120 次 Codex 评测并修正 4 个评分器偏差；本轮开发环境测试中弱配置受益、强配置未见差异。AXMORF Studio 0.3.0-rc.1 发布至 next。",
       "tools": [
-        "SenseNova（token.sensenova.cn）平台，实测原模型 sensenova-6.8-flash-lite 与切换后的 deepseek-v4-flash",
-        "Git 推送与重推操作，处理远端未同步提交导致的推送拒绝",
-        "SSH 远程连接（mypc 远程源），采集 Ubuntu 上的 Hermes/Codex 会话数据",
-        "Orca 应用（管理 AI 开发工作），排查其定时任务调度器与 Gateway 状态",
-        "Claude 与 Codex（作为开发工作流中的规划与实现工具）"
+        "TypeScript/JavaScript（评分器、评测脚本）",
+        "Node.js（运行评测与工具脚本）",
+        "React、React Three Fiber、Three.js（Viselora 参考页与评测页面）",
+        "Remotion（axmorf-studio 视频制作）",
+        "npm（发布、peer 依赖检查）",
+        "Git（分支、提交、合并）",
+        "Codex（评测执行）",
+        "Claude（规划与验收）",
+        "Edge TTS（旁白生成）",
+        "FFmpeg（抽帧、混音检查）",
+        "Python + unittest（Orca 样例验证）",
+        "WebGL（上下文丢失恢复验证）",
+        "Playwright（浏览器实测）",
+        "SwiftShader（软件渲染评测）"
       ],
       "work": [
-        "排查 vibe-journal-pipeline 定时任务：确认任务每天触发但连续失败 4 次（10/17-10/20），调度器与 Gateway 均在运行，下次计划 2026-10-21 00:05 JST，排除定时器问题。",
-        "定位三类失败原因：① sensenova-6.8-flash-lite 忽略 reasoning_effort=none，将全部输出额度（最高 32,768 tokens）耗于推理而不返回正文；② 10/19 日报已生成并本地提交，但远端有本地未同步的提交导致推送被拒绝；③ 最近四次 SSH 连接被关闭，无法读取 Ubuntu 上的 Hermes/Codex 会话数据（mypc 远程源仍无法连接）。",
-        "完成修复：实测原模型换用推荐采样参数仍耗尽额度，改用同平台的 deepseek-v4-flash，已验证能关闭推理并返回 JSON；同步修复定时入口（生成前同步远端更新、推送失败后重推、阻止夹带无关代码的检查），并加入离线回归测试；统一生成与修复提示词的技能排除名单，解决模型把已排除工作流名称写入技能列表的问题。",
-        "验证结果：测试从 140 项增至 149 项全部通过；153 篇日报全部校验通过；10/16、17、19 日日报已补回并通过原有校验；既有日报和私有归档未改动（三天私有归档指纹已核对）；本次未推送，回填使用当时已保存的输入（因远程源不可用）；用户已授权将已保存对话发送至 SenseNova 用于验证补回。",
-        "另一会话（codex:oker）中，向用户解释 Orca 终端与普通终端的区别：Orca 是管理 AI 开发工作的应用，终端运行 Mac 上的 Shell；区别在于工作目录、Agent 启动参数、状态显示、多任务/多 Agent 管理；Orca 默认启动 Claude 时带跳过权限确认参数，与手动输入不同；职责划分：Orca 组织追踪、Claude 规划协调、Codex 实现测试、用户决定目标。"
+        "**Viselora skill-ab-v2 评测**：完成 120 次 codex 运行（xhigh/low × N/S/V/VS × 任务 a–e，每格 3 次），满分 13 分。codex-xhigh 全部满分（60/60），原生条件下 15 次中 14 次手写 `THREE.WebGLRenderer`；codex-low 在 N 条件下 11.26 分，S 12.94、V 12.67、VS 13.00，N→S p=0.015、N→V p=0.034、N→VS p=0.007。弱配置差异显著，强配置无差异。核心发现：弱 agent 在原生条件下 5/15 次整页空白，均因 effect 清理中调用 `forceContextLoss()`，StrictMode 重新挂载时在同一 canvas 上拿到已丢失的 context；本轮结果表明 Viselora/R3F 的默认结构减少了此类生命周期错误；不能据此认定任意场景均不会出错。skill 使 60 次运行全部精确 pin 版本（未装 skill 的 codex-low 有 11/15 写成 `^`）；30/30 次自动选用 Viselora。V 条件出现一次 uniforms 陷阱：纹理未进材质却报告 ready，标题被隐藏。 正式统计仅含 Codex；3 次 Claude 试跑不计入。评测运行于 Vite dev server、StrictMode 和 SwiftShader，无人工视觉评分、真实 GPU 或移动设备覆盖，生产构建仅抽查 1 个项目。",
+        "**评测器修复**：修复 4 个评分器偏差（drei `<View>` 残影、CSS 平滑滚动、悬停路径经过相邻卡片、读屏文字粘连），校准 16/16 通过，23 次两遍评分完全一致。62 次平滑滚动运行用修复后的 instrument 重新评分，原分数保留为 `grade-pass2.json`。",
+        "**发布问题**：npm `latest` 标签仍指向 0.1.0-alpha.0（旧 API）；peer 依赖 `three ^0.184.0` 与 `three@latest`（0.186）冲突导致 ERESOLVE。已复现。后续修复（合并到 codex/hero-next，未推送）：three peer 范围改为支持 0.186（后台依次用 0.186/0.185/0.184 跑外部消费方校验）；browser-check.mjs 补充 playwright-core 安装说明；ModelTarget recipe 修复 reduced motion（recipe-a 浏览器实测 13/13，修复前 12/13）。npm latest 标签暂不改。评测报告形成提交 bad8c30、5da0d62；当天最终记录为第二轮评测及三个修复共 4 个本地未推送提交，尚未进入 main 对外发布。",
+        "**每日 AI 视频发布**：成片《聊完AI，记忆还是原版吗》，129.87 秒。栏目「AI知识、名词、工具」，旧公理「记忆只是经历的回放」，选题来自公理种子库，核对 2024 原始研究（arxiv 2408.04681）与 2025 原始研究（doi 10.1145/3708359.3712112）。画面让记忆胶片被对话中的错误细节改写。三平台均确认接收、审核中。小红书作品 ID `6ad5624200000000260337d8`；抖音 `7698167465565539626`；B站 `BV1uhnj6UEkv`（已核实独立上传任务、文件大小和合集）。已采集 9 组到期指标，无账号阻塞。完成抽帧、双封面及技术混音检查（响度 −15.9 LUFS、真峰值 −2.2 dBFS）；未实际听审或连续观看完整影片。",
+        "**Orca 编排配置**：用户目标：配置 Orca 实现“Claude 规划 → Codex 执行”的 AI 编排，所有项目通用；触发方式为在 Orca 的 Claude 会话中直接下开发任务，自动编排。已用 skill-creator 安装全局 `/orca-plan-execute` 入口，Orca 可识别；Claude 负责计划/调度/核验，Codex 负责实现/测试。独立样例验证通过：Claude 分析 calculator.py 中 `left - right` 的加法错误并写计划，派发 Codex 修复为 `left + right`，补充零值和负数回归测试；`python3 -m unittest -v` 结果 `Ran 3 tests in 0.000s`、`OK`；worker 已回收，验证记录存于 `.orca/plans/fix-calculator-add.result.json`。遗留：Orca 启动 Claude 时带“跳过权限确认”参数，首次启动仍可能弹确认页，本次验证用正常权限模式；该设置未修改。用户后续要求：在 Orca 打开 axmorf-studio 项目并新建空白 Claude 会话，已就绪；用户提供了首个任务提示词（梳理项目现状、制定计划、派发 Codex 执行，暂不提交/推送/合并/部署）。",
+        "**AXMORF Studio 0.3.0 验收与 rc 发布**：先完成新建及升级 Workspace 的两部无旁白演示片（18 秒/540 帧、14 秒/420 帧）。带旁白验收最初卡在 Edge TTS 第一句，授权重试后两句均成功、间隔 10 秒，完整交付 18.93 秒/568 帧竖屏片，film:check 零错误零警告；审片将模块落点调整至第 144 帧配乐重音，尚未实际听审混音。验收记录先提交为 1497c0f，随后 PR #12 合并，v0.3.0-rc.1 tag 指向默认分支 release commit 7f324a4；发布前 320 项测试通过、CI 发布门通过，两个包 next 均为 0.3.0-rc.1，latest 仍为 0.2.1。用户 Workspace 已原地升级、doctor 通过，49 个退役文件在备份后删除，8 部作品的组合注册及 film:check 均通过。样例验收不能替代晋级门：真实 Agent 宿主制作一部完整带旁白影片仍待完成，0.3.0 正式版未发布。测试中孤儿 Chrome 已结束，根因另行排查；旧 Project 遗留目录及用户既有旧进程未擅自清理。",
+        "**dom-webgl-workspace（viselora）**：已上线：AGENTS.md 为唯一规则来源、CLAUDE.md 只导入；0.2.0-alpha.1 发布 npm（alpha 标签）；轻量 skill 仓库 agenticnoob/viselora-skills（GitHub 安装约 7 秒，自动同步已配）；两轮 A/B 评测（第一轮在 main，第二轮在本地）。未解决：本地 4 个提交未推送（第二轮评测+3 个修复：three 支持到 0.186、browser-check 安装说明、ModelTarget reduced motion）；three 0.186 支持需发新版本（alpha.1 仍声明 ^0.184.0），发版顺序需与 skill 同步避免依赖冲突；npm `latest` 仍指向 0.1.0-alpha.0 旧 API；自动同步推送未真正触发过；skills.sh 收录未确认；第二轮只测 codex 未测 Claude、无人工评分；未在 @types/three 0.186 下检查 .d.ts；README 定位未改；ready 状态由调用方声明、声明错误会隐藏 DOM fallback 的设计弱点；line-height: normal 未计字体行间距；alpha.1 包内 README 是旧安装命令；三个旧会话 worktree 待清理。"
       ],
-      "resumeHighlight": "独立排查并修复了自动化日报生成管道的连续失败问题：通过实测对比模型推理行为，将模型从 sensenova-6.8-flash-lite 切换为 deepseek-v4-flash 以关闭推理并稳定返回 JSON，同时修复 Git 推送冲突与远程采集异常，将回归测试从 140 项扩至 149 项全部通过，并补回 3 天缺失日报且通过全部校验。"
+      "resumeHighlight": "设计并完成 Viselora 第二轮 120 次 Codex 双配置实验，修正 4 个评分器偏差并通过 16/16 校准；在本轮 StrictMode 与 SwiftShader 开发环境中，弱配置 N→S 差异达到 p=0.015，主要收益来自减少生命周期错误，强配置 60 次均满分。定位 forceContextLoss 与重挂载冲突，并明确保留缺少人工视觉、真实 GPU 和移动设备验证的边界。"
     },
     {
       "date": "2026-10-18",
-      "sessionCount": 6,
-      "turnCount": 40,
+      "sessionCount": 16,
+      "turnCount": 83,
       "skillsTouched": [
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 8
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 5
+        },
+        {
+          "id": "threejs",
+          "name": "Three.js",
+          "category": "library",
+          "count": 4
+        },
+        {
+          "id": "reactthreefiber",
+          "name": "React Three Fiber",
+          "category": "library",
+          "count": 3
+        },
+        {
+          "id": "drei",
+          "name": "drei",
+          "category": "library",
+          "count": 3
+        },
+        {
+          "id": "vitest",
+          "name": "Vitest",
+          "category": "build-tool",
+          "count": 2
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 4
+        },
+        {
+          "id": "githubactions",
+          "name": "GitHub Actions",
+          "category": "ci",
+          "count": 2
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 3
+        },
+        {
+          "id": "zsh",
+          "name": "Zsh",
+          "category": "shell",
+          "count": 1
+        },
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 2
+        },
+        {
+          "id": "claude-code",
+          "name": "Claude Code",
+          "category": "ai-coding-tool",
+          "count": 2
+        },
+        {
+          "id": "codex",
+          "name": "Codex CLI",
+          "category": "ai-coding-tool",
+          "count": 2
+        }
+      ],
+      "timelineEvent": "AXMORF Studio 0.2.1 正式版发布成功，并启动 0.3.0 旧主链删除重构；Viselora skill 发布并启动第二轮 A/B 评测。",
+      "tools": [
+        "TypeScript、React、Three.js、R3F、drei",
+        "Vitest、npm、GitHub Actions、Git、Zsh",
+        "Remotion、Claude Code、Codex"
+      ],
+      "work": [
+        "**AXMORF Studio 发布与重构**：修复发布流程（npm 新版本可见等待时间从 5 分钟延长至 30 分钟，版本已存在时核对校验值），本地模拟 npm 验证五种场景（传播慢、重跑已发布版本、认证失败、校验值不符、查不到）。版本从 0.2.1-rc.2 改为 0.2.1，PR #11 合并，v0.2.1 tag 推送，CI 12 分 42 秒成功。@axmorf/studio 和 create-axmorf-studio 的 latest 均为 0.2.1，runtime 约 4.5 分钟可见，creator 约 1 分钟。Workspace 升级至 0.2.1，doctor 六项通过，7 部片保留，备份在 .axmorf/backups/2026-10-18T14-37-21-852Z。遗留：next 标签仍指向 0.2.1-rc.2。",
+        "**0.3.0 删除旧主链（进行中）**：用户确认直接删除旧作品，开始 0.3.0。约 1460 个跟踪文件、62 万行；用递归 import 闭包确定可删内容，不靠目录名。已删 scripts/ 旧主链部分；精简 inspect-media.ts 仅保留成片/封面检查；移除两个 render 函数，改用 film 术语，去掉 RenderSpec 依赖。配乐引擎移入 scripts/films/score/（运行时代码，不进 Skill）。Remotion Root 换新签名（upgrade 覆盖托管文件前先备份）；删除旧 runtime 模块、catalog、旧测试。重写 CLI 路由/help/main；Web 控制中心从读旧 Project 改为读 film，交付媒体路由改为 /api/films/<filmId>/<kind>，用 publish.json 校验文件大小。保留已发布运行时文件的 checksum 完整性校验清单；Global BGM 不适用于 film（音乐来自 music.score），已删除该部分。修复 zsh 变量拆分问题（改用数组）和 ls 列出 . / .. 问题（改用 find）。 当天末尾仍在修复源码类型错误，0.3.0 重构与整体验收尚未完成。",
+        "**Viselora skill 发布与 A/B 评测**：发布到独立轻量仓库 agenticnoob/viselora-skills，主仓库 skill 目录作为唯一来源自动同步。生成结果 184 KB，skills CLI 可发现 viselora-dom-webgl；首次同步已推送（50b7d5e）。计划随后从 GitHub 安装到全新项目中的 Claude Code、Codex、Hermes；当天正文尚未记录该安装验收完成。第二轮 A/B 评测：对比 Viselora + skill 与原生 R3F/drei，用已发布 0.2.0-alpha.1，加入更难任务（Task D 交互式 3D 特性卡片、Task E 滚动故事 DOM 交接）和较弱模型。扩展共享 grader（evals/skill-ab/scripts/grade.mjs）增加任务 D/E 和三项鲁棒性检查，保持 10 个核心项和 total 不变以可比。4 个 pilot 运行已启动（计入 rep 1，prompts 已冻结），grader 校准后台运行（约 16 个用例）。编写 round-2 报告/聚合脚本：用共享 grader 评分，条件间配对置换检验。",
+        "**dom-webgl-workspace 测试与优化**：在 vitest.config.ts 排除 .claude/**，重跑全量测试通过（104 文件/536 测试），提交 2fefc9e 未推送；codex/hero-next 领先 origin 7 个提交。A/B 测试建议（用户采纳）：不原样重跑第一轮（两组 9.82/9.83 接近满分）；第二轮改为对比原生 R3F/drei、加 Demo 难度任务、加入较弱模型、测 skill 自动选中、每组至少跑 2 次。优化优先级：推送开 PR → 发布 0.2.0-alpha.1 → 补 JSDoc → 第二轮评测。JSDoc 已写入运行时包和 scroll-adapters 包，12 条防护测试通过；TextWave 删除 createAlignedTextTexture 绕行代码改用 createDOMTextTexture；verify:release 后台运行中。PR #7 已合并到 main（指向 19114aa），发布工作流已触发。",
+        "**we-media 每日 AI 视频任务**：品牌母题「Change until the axioms morph」。今日成片《熟悉的声音还能作证吗》（ai-voice-identity-20261018），136 秒，栏目「AI认知与哲思」；旧公理「声音就是本人」，来源为微软原始研究（arxiv 2301.02111）与 FTC 提醒。发布状态：抖音审核中（作品 ID 7697799183029390602）；小红书因安全验证阻塞；B站因合集名称大小写不一致（页面 Ai认知与哲思 vs 配置 AI认知与哲思）阻塞。补发完成：三项日常视频补发均公开——昨日B站《经验开始贬值了吗》（BV1u7nM6xETp）、今日B站《熟悉的声音还能作证吗》（BV18LnM6oEJh）、今日小红书（6ad4203e000000003003d13b）；今日抖音确认公开。发布器修正通过 96 项回归测试。遗留问题：10 月 3 日 AXMORF 测试稿仍被小红书驳回（外部平台信息/联系方式），需修改后重审，未原样重投。",
+        "**axmorf-studio 清理与优化建议**：关闭占用 release-0.1.16 worktree 的闲置终端（Orca 管理接口中断，改用系统进程关闭），归档并移除 worktree，净释放约 825 MiB；归档备份约 136 KB 已校验。优化建议（本轮未改代码，film 相关 19 项测试通过）：① 修 film:check 误判（组件导入别名误报未挂载、未调用函数中的组件却通过检查）；② 审片覆盖最终交付（封面预览、首尾衔接、关键转场低清短片）；③ 作品状态统一展示缺失/已过期/可用/已交付并接入控制中心；④ CI 增加打包后完整 direct film 验证；⑤ 按 0.3.0 计划收掉旧主链（71 个源码文件、56 个测试文件）。",
+        "**AXMORF Studio v2 成片审看**：dns-address-journey-v2 全片 46.67 秒（片头 2 秒、正片 36.67 秒、片尾 8 秒），审查看到品牌片头片尾、物体标签、各级服务器不同形态和连续空间平移，未见长时间静止；背景斜向光柱略抢眼，建议不再修改。早先提出的 0.2.1 正式版发布已在当天完成，0.3.0 旧主链清理仍在进行。",
+        "**实时语音咨询（线上创收方向）**：用户是全栈软件设计师（前后端都会），用 AI 提效，但认为 AI 使软件价值下降。用户不想做定制开发，想做面向公众的大众化产品；有两个开源项目但未变现。项目：AXMORF Studio（视频创作，用户每天工作流自动发布视频）和 Viselora（网页视觉与交互，用户个人主页使用）。用户未做过推广，担心项目使用入口不方便、门槛高。建议：先小范围推广验证真实使用，分别展示实际成果（影片/交互效果）；确认两个项目对非程序员用户上手门槛高（Viselora 需接入前端工程，AXMORF 需本地环境），优先验证新用户能否做出第一个成果，记录卡点再简化。市场参考：Upwork/Fiverr 报告显示 AI 自动化、AI 视频、全栈开发有需求，但平台数据不能保证个人收入。"
+      ],
+      "resumeHighlight": "完成 AXMORF Studio 0.2.1 正式版发布：将 npm 可见等待时间延长至 30 分钟，增加已发布版本校验值核对，并用本地模拟覆盖五种发布场景；随后基于 import 闭包启动 0.3.0 旧主链清理与 CLI、Web 数据源迁移。约 1460 个文件、62 万行是仓库盘点规模，并非已删除代码量；当天重构仍在类型修复阶段。"
+    },
+    {
+      "date": "2026-10-17",
+      "sessionCount": 5,
+      "turnCount": 34,
+      "skillsTouched": [
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "threejs",
+          "name": "Three.js",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "reactthreefiber",
+          "name": "React Three Fiber",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "nextjs",
+          "name": "Next.js",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 1
+        },
         {
           "id": "git",
           "name": "Git",
           "category": "vcs",
           "count": 1
+        },
+        {
+          "id": "rollup",
+          "name": "Rollup",
+          "category": "build-tool",
+          "count": 1
+        },
+        {
+          "id": "vitest",
+          "name": "Vitest",
+          "category": "test",
+          "count": 1
+        },
+        {
+          "id": "browsercheck",
+          "name": "browser-check.mjs",
+          "category": "tool",
+          "count": 1
         }
       ],
-      "timelineEvent": "完成《熟悉的声音还能作证吗》视频制作并在抖音、小红书、B站三平台发布，修复B站合集名称大小写匹配逻辑后补发成功。",
+      "timelineEvent": "完成《经验开始贬值了吗》152 秒视频与双封面交付；在 dom-webgl-workspace 修复文字纹理偏移并完成 recipes、浏览器自检和 529 项测试验证。",
       "tools": [
-        "Git（worktree 清理与归档）"
+        "TypeScript、React、Three.js、@react-three/fiber（R3F 9）、Next.js",
+        "npm（含 npmmirror 镜像问题）、Git（分支合并、worktree 清理）",
+        "Rollup（构建依赖）、Vitest（529 个测试）",
+        "自建 browser-check.mjs 浏览器自检脚本"
       ],
       "work": [
-        "we-media 视频制作与发布：围绕公理「声音就是本人」制作视频《熟悉的声音还能作证吗》，时长 136 秒，证据来源为微软 arXiv 研究与 FTC 消费者提醒。经两轮审片修正字距、确认标记时序和封面间距。抖音已提交审核（ID 7697799183029390602），小红书完成安全验证后公开（ID 6ad4203e000000003003d13b），B站因合集名称大小写不一致阻塞，修正发布器唯一匹配逻辑后补发成功（ID BV18LnM6oEJh），昨日B站视频也补发成功（ID BV1u7nM6xETp）。完成密集抽帧和音轨技术检查（峰值约 -2.1 dBFS，无削波）。发布测试 29/29 通过，发布器修正后 96 项回归测试通过。",
-        "axmorf-studio worktree 清理：归档并移除 release-0.1.16 worktree，关闭闲置终端进程，净释放约 825 MiB。Orca CLI 管理接口连接中断，通过系统进程关闭。",
-        "axmorf-studio 代码审查：提出 5 项优先级建议，包括修复 film:check 误判（组件导入别名被误报「未挂载」）、审片覆盖最终交付、作品状态可信度、CI 增加打包后完整验证、按 0.3.0 收掉旧主链。film 相关 19 项测试全部通过。",
-        "开源项目变现与推广讨论：讨论 realtime-voice-chat 项目的变现方向，确认两个开源项目（AXMORF Studio、Viselora）对非开发者上手门槛较高，尚未实现面向普通用户的快速入口。",
-        "编码任务确认：确认 Task E 需求（滚动驱动的四章 3D 故事页），要求 Vite + React 19 + TypeScript + Three.js 实现，尚未开始编码。"
+        "【we-media 每日 AI 视频流程】完成《经验开始贬值了吗》152.07 秒成片，栏目「AI认知与哲思」，主题为旧公理「经验越多，优势越大」。选题基于客服研究论文更新版（arxiv 2304.11771v2，采用「平均提升 15%」数据）及 METR 研究跟进。成片交付至 ~/AgentWorkspace/axmorf/deliveries/ai-experience-value-20261017/video.mp4，含 3:4 和 4:3 双封面。旁白 25 句全部生成，四轮抽帧审查修正了人物路径瞬移、桥端人物重叠、镜头人物靠近大字等问题。画面表达校正：新手沿 AI 桥接近资深者但停在稍低位置，避免暗示「新手全面胜过专家」；保留两种有代价的新公理候选。技术检查通过：film:check 无错误无警告，混音约 −15.9 LUFS、真峰值 −2.1 dBFS；完整连续观看和真实听审未验证。发布状态：小红书审核中（作品 ID 6ad2be6d000000001c01cfe1，线上封面核对通过）、抖音审核中（作品 ID 7697424362063842594）、B站提交前停止——页面合集名称为 `Ai认知与哲思`，配置为 `AI认知与哲思`，大小写严格匹配失败；原上传已保留并交还，需统一名称或映射后恢复。",
+        "【axmorf-studio 开发】TTS 咨询结论：项目默认使用免费 Edge TTS，代码已有 OpenAI 等语音服务接入类型；当前 Codex 会话无内置音频生成工具，不能直接生成 WAV/MP3；ChatGPT Plus/Pro 会员不包含 API 语音用量，需单独开通并支付 OpenAI TTS API 费用；建议保留 Edge TTS。仓库状态核查：当前/远端默认分支 `axmorf/npm-workspace-open-source`，最新提交 6e91b3e（合并 PR #10，2026-10-16），本地与远端完全一致；最新版本标签 v0.2.1-rc.2 已包含在当前分支；旧 worktree `axmorf/release-0.1.22` 有未提交修改（7 个已跟踪文件、3 个未跟踪），内容仅为 0.1.22 版本号、发布说明和验证记录，无业务代码，已确认不需要合并；3 个旧远端分支（main、axmorf/ubuntu-desktop-production-ux、axmorf/desktop-settings-rsp-create-contract）停留在 8 月 Desktop 路线，各有 104/124/127 个未被当前分支直接包含的提交，不能当作最新版本。用户请求清理无用 worktree 和残留，代理已开始盘点占用。",
+        "【skill 修复与 recipes 工作（多 claude 会话）】文字竖直偏移 bug（createDOMTextTexture half-leading）已修复并提交 c079697（分支 claude/zealous-varahamihira-774e48），带单测，Chrome 核对误差 1px 以内；未合并未推送。A/B 评测提交 87448b0（同分支）。recipes 会话已提交 4770fdf（分支 claude/ecstatic-clarke-76ef3e，未推送）：新增三个可复制 recipe（ModelTarget.tsx、ScrollStory.tsx、TextWave.tsx，各 10/10 评分）、SKILL.md 新增 9 条规则、scripts/browser-check.mjs 浏览器自检脚本、测试与评测用例更新。完整校准 12 个用例全部符合预期（基于 npm 0.2.0-alpha.0）；browser-check.mjs 在三个 recipe 页面通过，两个故意写坏页面被检出。已通过：npm test -- --run（529 个）、typecheck、verify:skill、check:imports、check:docs、git diff --check；根目录 build 未跑（未改 packages/apps）。新发现坑：R3F 9 较新版本会复制 uniforms prop 值进材质，修改 useMemo 返回对象不生效，已修复并写入 SKILL.md。本机 npmmirror 缺 @rollup/rollup-darwin-x64@4.64.8，需加 npm_config_registry=https://registry.npmjs.org/ 才能通过 verify:skill；CI 用官方源不受影响。待办：给公开类型补 JSDoc（未开始）、第二轮评测 Viselora 对比原生 R3F（未开始）、agent A/B 评测未用改进后 skill 重跑。合并冲突风险：三个分支均改过 SKILL.md、test/skill.test.ts、README.md；建议等 recipes 提交后一起合入 codex/hero-next，冲突一次解决。",
+        "【仓库清理（codex:axmorf-studio）】归档约 76 MB（未提交修改、素材、验证输出）至 ~/.codex/worktree-backups/axmorf-studio-20261017-214209。移除 4 个已合并旧 worktree、清除 2 条失效记录、清理构建目录与缓存，净释放约 3.08 GiB。保留 release-0.1.16 worktree（约 825 MB，因有终端停留其中）；当前代码、作品、素材、开发依赖均保留，工作区干净，Git 完整性检查通过。",
+        "【dom-webgl-workspace 后续状态】用户已授权本地审查两个侧分支、合入 codex/hero-next、解决冲突并校验，但当天记录未确认合并完成。推送、开 PR 与 npm 修复版发布尚未完成；公开类型 JSDoc、改进后 skill 的 A/B 复测、Viselora 与原生 R3F 的第二轮评测仍待开展。"
       ],
-      "resumeHighlight": "修复 B 站发布器合集名称大小写匹配逻辑（配置「AI认知与哲思」vs 页面「Ai认知与哲思」），使视频成功补发，并通过 96 项回归测试验证。"
+      "resumeHighlight": "主导并完成一个 AI 视频成片（152 秒，含双封面）的选题、旁白生成、四轮抽帧审查与画面表达校正，并通过 film:check 技术检查（混音 −15.9 LUFS、真峰值 −2.1 dBFS），同时推进一个可安装 skill 的 bug 修复（文字纹理偏移，误差 1px 内）、新增三个可复制 recipe 及浏览器自检脚本，跑通 529 个测试与多项校验，并完成仓库清理（净释放约 3.08 GiB）。"
+    },
+    {
+      "date": "2026-10-16",
+      "sessionCount": 47,
+      "turnCount": 216,
+      "skillsTouched": [
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 6
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 6
+        },
+        {
+          "id": "threejs",
+          "name": "Three.js",
+          "category": "library",
+          "count": 6
+        },
+        {
+          "id": "reactthreefiber",
+          "name": "React Three Fiber",
+          "category": "library",
+          "count": 6
+        },
+        {
+          "id": "vite",
+          "name": "Vite",
+          "category": "build-tool",
+          "count": 6
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 6
+        },
+        {
+          "id": "playwright",
+          "name": "Playwright",
+          "category": "tool",
+          "count": 4
+        },
+        {
+          "id": "webgl",
+          "name": "WebGL",
+          "category": "domain",
+          "count": 6
+        },
+        {
+          "id": "gltf",
+          "name": "glTF",
+          "category": "format",
+          "count": 2
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "category": "tool",
+          "count": 2
+        },
+        {
+          "id": "homebrew",
+          "name": "Homebrew",
+          "category": "package-manager",
+          "count": 1
+        },
+        {
+          "id": "chrome",
+          "name": "Chrome",
+          "category": "tool",
+          "count": 1
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 2
+        },
+        {
+          "id": "claude",
+          "name": "Claude",
+          "category": "ai-model",
+          "count": 6
+        },
+        {
+          "id": "codex",
+          "name": "Codex CLI",
+          "category": "ai-coding-tool",
+          "count": 6
+        },
+        {
+          "id": "gpt61sol",
+          "name": "GPT-6.1-sol",
+          "category": "ai-model",
+          "count": 1
+        },
+        {
+          "id": "opus55",
+          "name": "Opus 5.5",
+          "category": "ai-model",
+          "count": 1
+        }
+      ],
+      "timelineEvent": "完成 Viselora 首轮 24 次 A/B 评测：在均已指定 Viselora 的任务中，有/无 skill 未见可测量增益；AXMORF Studio 0.2.1-rc.2 发布并升级 Workspace。",
+      "tools": [
+        "TypeScript、React 19、Vite、Three.js 0.184、React Three Fiber 9、@viselora/dom-webgl 0.2.0-alpha.0",
+        "Playwright（headless Chrome 截图与像素对比）、WebGL（含文字波浪着色器）、glTF 模型加载",
+        "FFmpeg（视频渲染与编码）、Homebrew Cask（Chrome 更新）",
+        "Claude（opus-5-5）与 Codex（gpt-6.1-sol）作为评测 agent",
+        "Git、npm"
+      ],
+      "work": [
+        "【Viselora DOM-WebGL 技能 A/B 评测】完成 24 次运行（claude opus-5-5 与 codex gpt-6.1-sol × 3 任务 × 有/无 skill × 两种 prompt）。最终版评分器经 8 例校准全部通过，headless Chrome 断连重试 3 次。结论：有 skill 平均 9.83/10，无 skill 9.82/10，无可测量差异；22/24 次 agent 直接读 node_modules dist 代码，正确性主要来自包 API 设计。发现真实 bug：createDOMTextTexture 未计入 line-height 上下留白，72px 字号下 WebGL 文字比 DOM 偏上 4–22px；hero-next 的 fillTextInLineBox 已有正确实现但未修入包。skill 缺陷：effect-recipes.md 仅 13 行文字说明（agent 实际写 185–566 行代码）；关键约束只在 references 中，claude 6 次运行 4 次只读 SKILL.md；revision 用法示例缺失。报告提交至本地 commit 87448b0（未推送），文件在 evals/skill-ab/。",
+        "【任务 A/B/C 实现与验证】三个任务均用 @viselora/dom-webgl 0.2.0-alpha.0 构建：任务 A 产品落地页（3D 模型跟随 DOM 卡片，含回退）；任务 B 滚动驱动 3D 叙事（三章，状态完全由滚动位置决定，无时间动画）；任务 C DOM 文字 WebGL 波浪（createDOMTextTexture + 自定义着色器）。关键修复：R3F 复制 uniforms 导致纹理未传到实际材质（改为直接写材质 uniforms）；CSS font 简写返回空字符串导致字体捕获失败（改为显式读取字号/字重/字体族）；共享材质/几何体仅第一个分片获得（改为单一共享对象）。各实现报告了类型检查、构建及相应浏览器验证；SSR、卸载/重挂、逐像素滚动一致性和 React Doctor 100/100 是部分运行的验证证据，个别运行明确未测试重挂，不能视为 24 次运行均覆盖。",
+        "【Viselora 90 秒视频制作与发布】交付 1920×1080、30fps 横屏字幕配乐版（无旁白），Vox 剪纸分格结合 hero-next 实机截图，四面体展开用剪纸图解。三轮画面审片及交付校验通过，错误警告为零；旁白因持续 HTTP 429 限流放弃（用户授权最多额外重试 3 次，最终仅补成第 16 句，第 17 句再次 429 后停止），使用中文字幕与原创配乐。用户指出漏分配合集，代理承认流程疏漏：新版交付流程未自动写入合集字段，仅补记本地发布交接记录为「AI知识、名词、工具」，平台端尚未设置，未误报为已分配。",
+        "【三平台发布】用户要求发布最新视频，代理最初误按本地记录选了《本周变量》，经用户纠正后改为 AXMORF 最新交付《Viselora：让网页与三维同频》。小红书：单次提交，后台确认审核中，话题逐一核对绑定，竖版封面像素一致。抖音：单次提交，审核中，双封面和合集已核对。B站：投稿后确认阶段超时，浏览器安全交还；用户确认后恢复，核实发布成功，作品号 BV1LqJX64Etz。最终三平台均公开可播放，未重复投稿；遵循「逐平台验证后再宣称发布」原则。",
+        "【we-media 每日视频自动化】10月16日发布「本周变量｜AI搬回家，谁买单？」，成片142.47秒，响度−15.8 LUFS、峰值−2.1 dBFS。抖音审核中（作品ID 7697053074560404755），小红书修复正文回读失败后提交审核（作品ID 6ad1adc1000000001c02d294），B站改用键盘输入提交（BV1FNJQ68EEY）。交接器适配新 Film 格式，91 项测试通过。修正栏目配置：不应自编 7 个栏目，应从 AXMORF 配置选择（AI认知与哲思为主栏目），新规则为栏目由选题文件指定，交接脚本负责带到发布，未指定或不在配置时直接报错。 后续撤回自编栏目的修正通过 92 项交接与发布回归测试，新栏目规则尚未在真实每日任务中验证。",
+        "【AXMORF Studio 0.2.1 升级】发现 0.2.0 direct 流程未接入片头片尾模板（回归缺陷），PR #10 已合并：系统自动挂片头片尾、film:review 提示长时间静止画面、Skill 要求审片结论附帧号。两个包的 next 均为 0.2.1-rc.2，latest 仍为 0.2.0；Workspace 升级至 0.2.1-rc.2，doctor 6 项通过。npm 发布延迟问题：运行时包发布后约 10 分钟才可见，建议放宽等待时间至 30 分钟。",
+        "【DNS 视频 v2】按新流程从头制作，主线「DNS 先查出地址，浏览器再连接服务器」，1080×1920、30fps，总长 46.67 秒（片头 2 秒＋正片 36.67 秒＋片尾 8 秒）。事实来源 Cloudflare DNS 解释、RFC 1034，写入 bookends.sources。两轮审片修改设备铭牌位置、根服务器与顶级域取景、删除重复说明。两次 film:check 均零错误零警告，交付目录 deliveries/dns-address-journey-v2/。",
+        "【dom-webgl-workspace 整理】项目已提交至 codex/hero-next 分支（commit f0ffa65），领先 origin 1 个提交，尚未推送。修复 SKILL.md 跨目录链接失效（改为 GitHub 绝对地址），维护脚本移至 scripts/，新增测试防止跨目录链接回归。Frontmatter 优化 description 为「做什么+何时用」，补充关键词、license、metadata。统一 agent 规则：Codex/Hermes 原生读 AGENTS.md，CLAUDE.md 仅含 @AGENTS.md 引用。验证通过：typecheck、528 个全量测试、check:imports、skill:api:check、git diff --check；三类 agent 采用统一规则入口，未将文档中的安装命令视为三类宿主均完成安装验收。未运行 build 和 verify:release。",
+        "【本机 Chrome 更新】经 Homebrew Cask 安装（brew install --cask google-chrome），已更新 151.0.7922.174 → 155.0.8059.85，代码签名校验通过，修复安装目录权限。"
+      ],
+      "resumeHighlight": "主导了 Viselora DOM-WebGL 技能的 A/B 评测，设计并执行 24 次 agent 运行（Claude 与 Codex 对比），构建了含静态检查、SSR、Playwright 浏览器验证的自动化评分器，最终得出「技能对生成质量无可测量差异」的结论，并定位到 createDOMTextTexture 的 line-height 偏移 bug 与 skill 文档缺陷，为后续优化提供了明确方向。"
     },
     {
       "date": "2026-10-15",
-      "sessionCount": 4,
-      "turnCount": 22,
+      "sessionCount": 6,
+      "turnCount": 43,
       "skillsTouched": [
         {
           "id": "typescript",
@@ -129,7 +662,7 @@
           "id": "npm",
           "name": "npm",
           "category": "package-manager",
-          "count": 2
+          "count": 3
         },
         {
           "id": "remotion",
@@ -140,63 +673,71 @@
         {
           "id": "edgetts",
           "name": "Edge TTS",
-          "category": "ai-provider",
-          "count": 4
-        },
-        {
-          "id": "nodeedgetts",
-          "name": "node-edge-tts",
           "category": "library",
-          "count": 2
-        },
-        {
-          "id": "python",
-          "name": "Python",
-          "category": "language",
-          "count": 1
+          "count": 3
         },
         {
           "id": "websocket",
           "name": "WebSocket",
           "category": "protocol",
-          "count": 3
+          "count": 2
         },
         {
-          "id": "httpsproxyagent",
-          "name": "https-proxy-agent",
-          "category": "library",
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 2
+        },
+        {
+          "id": "github",
+          "name": "GitHub",
+          "category": "vcs-host",
           "count": 1
         },
         {
-          "id": "zsh",
-          "name": "Zsh",
-          "category": "shell",
+          "id": "codex",
+          "name": "Codex CLI",
+          "category": "ai-coding-tool",
+          "count": 2
+        },
+        {
+          "id": "gpt61sol",
+          "name": "GPT-6.1-sol",
+          "category": "ai-model",
           "count": 1
         },
         {
-          "id": "mp3",
-          "name": "MP3",
-          "category": "format",
+          "id": "claude",
+          "name": "Claude",
+          "category": "ai-model",
           "count": 1
         }
       ],
-      "timelineEvent": "完成 AXMORF Studio Edge TTS 429 问题的隔离诊断（5/5 次低频请求全部成功），并在源码仓库实现请求间隔与脱敏日志，108 项离线回归通过。",
+      "timelineEvent": "AXMORF Studio 0.2.0 正式发布并交付验收片，随后完成 Edge TTS 429 根因排查并发布 0.2.1-rc.1 修复版。",
       "tools": [
-        "TypeScript / Node.js 源码仓库（~/projects/axmorf-studio）",
-        "AXMORF Studio Workspace 与 axmorf-film 技能（Remotion 影片制作流程）",
-        "Edge TTS（node-edge-tts@1.2.11，WebSocket 握手与 GEC token）",
-        "上游 Python edge-tts 7.3.1 常量与 drm 实现对照",
-        "https-proxy-agent 代理 CONNECT 行为核对",
-        "npm 脚本、类型检查、lint、格式与文档链接检查"
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "Remotion",
+        "Edge TTS",
+        "WebSocket",
+        "Git",
+        "GitHub",
+        "Codex",
+        "GPT-6.1-sol",
+        "Claude"
       ],
       "work": [
-        "每日 AI 视频选题与发布流程（we-media 自动化）：读取了 we-media 与 AXMORF 两个项目的 AGENTS.md 及操作指南，任务要求从 ChatGPT「AI认知工程」项目选题、制作 90–150 秒视频并发布到小红书、抖音、B站。日志中未出现该流程的实际执行结果或发布记录，无法确认有作品完成制作或发布。",
-        "DNS 科普竖屏视频制作（AXMORF）：确定核心结论为「DNS 查域名对应 IP，先查缓存，没有再逐级问路，浏览器拿到 IP 后连接服务器」，设计了地址栏特写、查询光路、根/顶级域/权威服务器、IP 返回点亮网页的连续空间，采用深蓝机房、青色光路、橙色答案的视觉方案，配乐从稀疏电子脉冲加速到找到 IP 时落重音。已保存分镜构思 DIRECTION.md 与中文旁白稿 film.json，环境检查通过。但 TTS 两次失败：首次 s01 报 WebSocket handshake HTTP 429，用户授权重试后 s04 再次 429。未生成旁白、配乐、审片联系表、视频与封面，因此没有审片修改和关键帧可报告。",
-        "Edge TTS 429 根因排查：核对本地 node_modules 中 node-edge-tts@1.2.11 实际代码，确认使用 Chromium 143.0.3650.75、5 分钟窗口 SHA-256 生成 64 位 hex 的 GEC v1 token，每次调用新建 WebSocket。对照上游 Python edge-tts 7.3.1，Chromium 常量相同但版本前缀改为 2-、token 改为 16+64 hex 的 v2 格式。结合 2026-10-13 端点迁移记录（约 26 秒内 10 段成功、第 11 段 429、补做 5 段成功），判断短时节流为主要假设，协议落后确实存在但未证明导致 429，代理/出口 IP 限制未排除。",
-        "隔离诊断（用户确认后执行）：最多 5 次真实请求，初始冷却 14 分 22 秒，请求间隔 137.2/185.3/184.5/148.8 秒，全部成功，未复现 429。覆盖当前 API+v1 代理、当前 API+v1 直连、Bing+v2 代理、Bing+v2 直连、当前 API+v2 代理五种组合，CONNECT 均 200、WebSocket 均 101，五段 MP3 均完整解码。代理与直连分别落到 SG2、TYO 不同节点。诊断脚本与日志放在临时目录，生产源码与依赖未改动。",
-        "源码修复实现：在 ~/projects/axmorf-studio 的 scripts/narration/adapters/edge-tts-client.ts 中实现同一适配器串行请求、前次结束后至少间隔 10 秒、首句与缓存命中不等待、失败即停不重试不 fallback，并增加脱敏的时间/路由/状态日志。定向测试 16 项通过，扩展离线回归 108 项全部通过，类型检查、lint、格式和文档链接检查通过。改动未提交、未发布，未更新已安装 Workspace，10 秒初值的实际缓解效果仍待真实生产验证。"
+        "AXMORF Studio 0.2.0 正式版发布：合并 PR #6、#7，npm run check 通过 1548 项测试，用户 Workspace 从 0.1.23 升级到 0.2.0，doctor 6 项通过，旧作品与交付保留，替换文件已备份。",
+        "交付验收片 https-handshake-direct：38.87 秒竖屏，四个交付文件复验通过，内容为 HTTPS 握手连续场景，配乐重音在第 692 帧对准钥匙合成帧，响度 −15.7 LUFS，审片修正 6 个问题，遗留两处小问题（字幕遮住窃听者记录末行、结尾特写裁掉 'Example Bank' 左侧）。",
+        "新制作方式落地：每片为 src/films/<id>/ 下普通 Remotion 工程，9 个 film:* 命令，新增 Skill axmorf-film，检查只拦真正会出错的情况。",
+        "项目整理 PR #8 合并：AGENTS.md 从 325 行精简到 113 行，旧主链规则迁至 docs/guides/LEGACY_PROJECT_PRODUCTION_RULES.md；ITERATION_STATUS.md 从 147KB 减到 44KB，0.1.21 及更早历史移入 docs/archive/；新增 .claude/settings.json 白名单；Workspace 模板新增 .claude/skills/axmorf-film/SKILL.md（普通文件非符号链接）；修复 creator 打包检查脚本按 0.2.0 前写法断言导致 npm pack 失败的问题。",
+        "Edge TTS 429 根因排查：核实 node-edge-tts@1.2.11 使用 Chromium 143.0.3650.75、GEC v1 token，Python 上游 edge-tts 7.3.0 已合入 GEC v2；调用链为 edge-tts-client.ts 每句新建 WebSocket、voice.ts 逐句串行无间隔；隔离诊断 5/5 全部成功未复现 429，覆盖 API/Bing 端点 × GEC v1/v2 × 代理/直连；最终判断短时节流是主要假设，协议差异存在但未证明导致这些 429。",
+        "修复实施：在 edge-tts-client.ts 实现同一适配器串行请求、前次结束后至少间隔 10 秒、首句和缓存命中不等待、失败即停不重试不 fallback、增加脱敏日志；离线验证 108 项回归全部通过，类型、lint、格式、文档检查通过，实现阶段新增真实 TTS 请求 0 次。",
+        "发布 0.2.1-rc.1：PR #9 合并（check:static 通过，1552 项测试），版本号 0.2.1-rc.1，tag 已推送，两个包 next 均为 0.2.1-rc.1，latest 仍为 0.2.0；Workspace 升级到 0.2.1-rc.1，doctor 6 项通过，新增 .claude/skills/axmorf-film/SKILL.md，两部片保留。",
+        "Codex 验收 DNS 视频：指定模型 gpt-6.1-sol、推理 high、不开 Fast，题目为约 45 秒中文竖屏解释 DNS 如何把网址变 IP；第一次运行 2 分钟即停（Edge TTS 首句 s01 返回 HTTP 429），已完成 doctor、完整读 Skill、写好 DIRECTION.md 分镜构思和 12 句旁白；重试再次失败（s04 返回 429），s01–s03 已缓存，仍未进入审片与交付。"
       ],
-      "resumeHighlight": "主导 AXMORF Studio Edge TTS 频繁 429 的根因定位：通过对照本地 node-edge-tts 与上游 Python edge-tts 的 GEC token 实现、复核历史端点迁移证据，设计并执行 5 次低频隔离诊断（覆盖端点、协议版本与代理/直连路由），确认短时节流为主要假设；随后在源码中实现请求串行化与最小间隔、脱敏日志，108 项离线回归、类型与 lint 检查全部通过。"
+      "resumeHighlight": "完成 AXMORF Studio 0.2.0 发布、Workspace 升级和 Edge TTS 429 隔离诊断：5/5 次低频请求均成功，将短时节流保留为待验证假设；实现串行请求、10 秒间隔与脱敏日志，108 项离线回归通过，并发布 0.2.1-rc.1 至 npm next。"
     },
     {
       "date": "2026-10-14",
