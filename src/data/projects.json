@@ -143,8 +143,8 @@
       ],
       "highlights": [
         "单一 React Three Fiber Canvas 架构",
-        "提供 DOM 目标、文本布局与纹理工具及运行时 Hooks",
-        "支持原生 R3F JSX、Hooks 与 Three.js 对象",
+        "提供 DOM 文本布局、纹理工具、DOM 目标与运行时 Hooks",
+        "支持原生 R3F JSX、Hooks、Three.js 对象及生态工具",
         "提供 Lenis、GSAP 与 ScrollTrigger 可选适配"
       ],
       "links": [
@@ -160,7 +160,7 @@
       "github": {
         "repositoryId": 1272434230,
         "fullName": "agenticnoob/dom-webgl-workspace",
-        "fingerprint": "a9ecf7d5a6b890ad0bec6f67160747c245a0f588658db18ee097acf0a41023dd"
+        "fingerprint": "f46dd97e5133e905c5e660893ae56b8c37b97d3b7155befa7e2383567d6eb05e"
       }
     },
     {
