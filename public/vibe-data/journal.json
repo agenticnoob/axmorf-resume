@@ -2,10 +2,78 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "e46c1dd4256c698dfae9743976f4696d762e54a1",
-    "generatedAt": "2026-10-22T14:02:53.054728+09:00"
+    "revision": "aa44a5404c7e9425e802b92756658ab6e84e1d57",
+    "generatedAt": "2026-10-25T00:06:53.244234+09:00"
   },
   "entries": [
+    {
+      "date": "2026-10-24",
+      "sessionCount": 4,
+      "turnCount": 37,
+      "skillsTouched": [
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 2
+        },
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "threejs",
+          "name": "Three.js",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "githubactions",
+          "name": "GitHub Actions",
+          "category": "ci",
+          "count": 1
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "category": "tool",
+          "count": 1
+        }
+      ],
+      "timelineEvent": "完成 Git 教程系列第 2 集《Git 和 GitHub，究竟是什么关系？》的制作与三平台发布，并发布 dom-webgl-workspace 0.3.0-alpha.0 到 npm。",
+      "tools": [
+        "Remotion（AXMORF 工作空间的 axmorf-film 技能，用于视频制作与交付）",
+        "npm（发布 dom-webgl-workspace 0.3.0-alpha.0，核对版本、标签与 provenance）",
+        "TypeScript（dom-webgl-workspace 的预热上传像素预算与 createFrameSequence 重构）",
+        "React、Three.js、R3F（dom-webgl-workspace 的依赖与示例 app 图片序列）",
+        "GitHub Actions（dom-webgl-workspace 的 npm-release 发布工作流）",
+        "FFmpeg（压缩 Git 教程第 1 集为 720p 观看版）"
+      ],
+      "work": [
+        "we-media 每日视频流程：完成「不懂外语，还能聊多深」109 秒成片，发布到小红书、抖音、B站，三平台均确认审核中并取得作品 ID；昨日作品三平台已确认公开，采集了次日与第七天数据。",
+        "Git 教程系列：确认第 1 集三平台已公开，合集均为「Git一次性讲清楚」；开始第 2 集《Git 和 GitHub，究竟是什么关系？》，37 句旁白全部生成，完成三轮抽帧审片，修正字幕遮挡与推近镜头裁字问题，预计成片 135.2 秒，正在渲染正式成片。",
+        "Git 教程第 1 集发布：将发布 JSON 的合集改为「Git一次性讲清楚」（严格大小写），修正小红书横屏封面入口与 3:4 封面裁切，三平台提交并确认审核中。",
+        "Git 教程第 1 集观看版：原视频 33 MB 获取超时，用 FFmpeg 压缩为 4.4 MB 的 720p 观看版，保留完整内容与片头片尾。",
+        "AXMORF 配置：在配置页新增合集「Git一次性讲清楚」，大小写已核对；将 Ego Lite 浏览器从 [private-ip] 升级到 [private-ip]。",
+        "dom-webgl-workspace：发布 0.3.0-alpha.0 到 npm，核对 alpha 标签、React peer 范围、SLSA provenance，并全新安装验证无依赖冲突；将发布记录写入 STATUS 并推到 main。",
+        "dom-webgl-workspace 优化：将预热上传改为按纹理字节数控制每帧预算，示例 app 改用 ImageBitmap 加载图片序列，修复坏帧反复重试问题，5 个测试通过，A/B 基准在后台运行。"
+      ],
+      "resumeHighlight": "主导 dom-webgl-workspace 0.3.0-alpha.0 的 npm 发布与优化，将预热上传改为按纹理字节数控制每帧预算，示例 app 改用 ImageBitmap 加载图片序列，修复坏帧反复重试问题，并通过全新安装验证依赖兼容性。"
+    },
     {
       "date": "2026-10-21",
       "sessionCount": 8,
