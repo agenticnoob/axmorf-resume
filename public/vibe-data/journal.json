@@ -2,10 +2,99 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "aa44a5404c7e9425e802b92756658ab6e84e1d57",
-    "generatedAt": "2026-10-25T00:06:53.244234+09:00"
+    "revision": "a3044264f7be19c7f2f6469c4733b235efd3f43c",
+    "generatedAt": "2026-10-26T00:07:09.304335+09:00"
   },
   "entries": [
+    {
+      "date": "2026-10-25",
+      "sessionCount": 6,
+      "turnCount": 162,
+      "skillsTouched": [
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 2
+        },
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "threejs",
+          "name": "Three.js",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "reactthreefiber",
+          "name": "React Three Fiber",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "reactthreedrei",
+          "name": "@react-three/drei",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "webgl",
+          "name": "WebGL",
+          "category": "domain",
+          "count": 1
+        },
+        {
+          "id": "webp",
+          "name": "WebP",
+          "category": "format",
+          "count": 1
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 1
+        },
+        {
+          "id": "edgetts",
+          "name": "Edge TTS",
+          "category": "tool",
+          "count": 1
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "category": "tool",
+          "count": 1
+        }
+      ],
+      "timelineEvent": "Git 教程系列第 8–17 集完成配音、审片与三平台发布，其中第 8–14 集全部公开；dom-webgl-workspace 完成主站与效果库重构，新增 GlyphScatter、InkField、GlassTitle 三个 WebGL 组件。",
+      "tools": [
+        "Edge Read Aloud（云溪）配音，串行请求，429/无状态码超时按原服务等待重试并复用缓存",
+        "FFmpeg 渲染与解码验证（完整音画解码退出码 0）",
+        "Git 版本控制与提交（多个提交：74663f8、45e9053、58bb017、0b27e02、f13489c）",
+        "TypeScript 与 React（含 React Three Fiber、@react-three/drei）开发 WebGL 组件",
+        "WebGL 与 WebP 图片序列优化（ImageBitmap 解码）",
+        "npm 包管理与发布（0.3.0-alpha.0 实测安装）"
+      ],
+      "work": [
+        "Git 教程系列（codex:we-media）：接手后核实第 1–7 集三平台回执，修正主进度表从第 8 集继续。第 8–17 集完成配音（Edge Read Aloud 云溪，串行请求，429/无状态码超时按原服务等待重试并复用缓存）、审片（修复封面重叠、分支标签遮挡、静止警告、提交节点与配乐重音对齐等）、封面修订与三平台发布。第 8–14 集三平台全部公开，第 15 集抖音公开页回查超时暂保留审核记录，第 16–17 集审核中。修复发布器将同系列不同集引用同一 Git 手册误判为重复的问题（42 项测试通过）、小红书浮层遮挡续接时校验拒绝的问题（55 项回归）、B站状态切换查询逻辑（54 项回归）。第 17 集首轮审查后将检查状态、确认基点、执行 rebase 对齐旁白，abort 标为另一条处理路径，复审通过正在正式渲染。",
+        "每日 AI 视频（codex:we-media）：《资料塞满，答案就更准吗》成片 115.97 秒，双封面与交付检查通过，三平台已提交（小红书、抖音审核中，B站已公开）。十三条历史待确认记录已核实公开，十三份到期核心指标已补齐，栏目周报已保存。",
+        "dom-webgl-workspace（claude:dom-webgl-workspace）：图片序列优化（提交 74663f8）将 454 帧 WebP 改为仅解码当前帧前后几帧为 1280×720 ImageBitmap，texSubImage2D 主线程占比 83.5%→1.7%，最长帧 635ms→202ms，修复解码失败帧反复重试 bug，全仓库 typecheck 和 625 测试通过。按像素预算上传实验（2MP）无效已撤回。skill 组件扩充（提交 45e9053）新增 @react-three/drei 和 react-error-boundary 依赖，9 个 Hero Next 提炼组件复制到 skill recipes/hero/，新增一致性测试，全仓库 626 测试通过。skill 体积实测 393 KB（此前粗估 600 KB 有误），加载机制为三层按需。",
+        "dom-webgl-workspace 主站与效果库：提交 f13489c 完成主站 / 双色印刷风格（冷白纸底、DOM 蓝、WebGL 荧光粉、叠印紫），首屏标题演示 WebGL 与 DOM 逐像素对齐（实时套准偏差读数），第二屏三层叠印滚动展开合拢，顶部实时面板（帧率、p90、质量档位、DPR、章节状态）。效果库 /effects.html 全部 44 个效果，7 个分组标题、固定导航、返回链接。新增三个组件（提交 0b27e02）：GlyphScatter（逐字从 DOM 量出，滚动飞回原位后碎成颗粒）、InkField（指针划过墨迹流动，甩快带红色）、GlassTitle（铸玻璃标题，折射纸色、基线网格和墨迹，边缘色散）。全仓库 642 个测试通过，UHD 630 上 60 秒滚动基准 1 倍和 4 倍降速均 59.6 fps（p95 约 18 ms），修复套准读数每帧触发重排问题（改为每秒最多 10 次）。已知问题：measureDOMText 会把长单词按字母拆行，本次靠 white-space: nowrap 绕过，runtime 未修；着色器材质的 uniforms 对象挂载后被整体替换时渲染器仍用旧对象，已改为通过材质引用更新。未推送，询问是否推送并开 PR。"
+      ],
+      "resumeHighlight": "在 dom-webgl-workspace 中完成主站与效果库重构：新增 GlyphScatter、InkField、GlassTitle 三个 WebGL 组件，主站实现 WebGL 与 DOM 逐像素对齐的实时套准偏差读数，效果库收录全部 44 个效果；全仓库 642 个测试通过，UHD 630 上 60 秒滚动基准 1 倍和 4 倍降速均 59.6 fps（p95 约 18 ms），并修复了套准读数每帧触发重排的性能问题。"
+    },
     {
       "date": "2026-10-24",
       "sessionCount": 4,
