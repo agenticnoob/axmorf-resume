@@ -2,10 +2,163 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "a3044264f7be19c7f2f6469c4733b235efd3f43c",
-    "generatedAt": "2026-10-26T00:07:09.304335+09:00"
+    "revision": "60be1adc181a0133171e3ced767cac08bda03cd9",
+    "generatedAt": "2026-10-27T00:08:58.347941+09:00"
   },
   "entries": [
+    {
+      "date": "2026-10-26",
+      "sessionCount": 10,
+      "turnCount": 186,
+      "skillsTouched": [
+        {
+          "id": "edgetts",
+          "name": "Edge TTS",
+          "category": "ai-provider",
+          "count": 3
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "category": "tool",
+          "count": 2
+        },
+        {
+          "id": "vercel",
+          "name": "Vercel",
+          "category": "cloud",
+          "count": 2
+        },
+        {
+          "id": "cloudflare",
+          "name": "Cloudflare",
+          "category": "cloud",
+          "count": 2
+        },
+        {
+          "id": "tencentcloudcdn",
+          "name": "腾讯云 CDN",
+          "category": "cloud",
+          "count": 1
+        },
+        {
+          "id": "githubactions",
+          "name": "GitHub Actions",
+          "category": "ci",
+          "count": 1
+        },
+        {
+          "id": "lenis",
+          "name": "Lenis",
+          "category": "library",
+          "count": 1
+        },
+        {
+          "id": "webgl",
+          "name": "WebGL",
+          "category": "domain",
+          "count": 1
+        },
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 1
+        },
+        {
+          "id": "docker",
+          "name": "Docker",
+          "category": "container",
+          "count": 1
+        },
+        {
+          "id": "tailscale",
+          "name": "Tailscale",
+          "category": "network",
+          "count": 1
+        },
+        {
+          "id": "cuda",
+          "name": "CUDA",
+          "category": "runtime",
+          "count": 1
+        },
+        {
+          "id": "nvidia",
+          "name": "NVIDIA",
+          "category": "hardware",
+          "count": 1
+        },
+        {
+          "id": "voxcpm",
+          "name": "VoxCPM",
+          "category": "ai-model",
+          "count": 2
+        },
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "zsh",
+          "name": "Zsh",
+          "category": "shell",
+          "count": 1
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 1
+        },
+        {
+          "id": "lego",
+          "name": "lego",
+          "category": "tool",
+          "count": 1
+        }
+      ],
+      "timelineEvent": "完成《终端与命令行》系列第1–5集三平台发布，并修复VoxCPM TTS克隆的FFmpeg与诊断缺陷（补丁待发布）。",
+      "tools": [
+        "Edge TTS（配音，多次遇HTTP 429限流后重试）",
+        "FFmpeg（解码检查、PCM提取，定位exit 234缺陷）",
+        "Vercel（主站部署，域名viselora.zzzxc.com绑定）",
+        "Cloudflare（DNS托管、CNAME指向）",
+        "腾讯云CDN（4个子域名接入配置）",
+        "GitHub Actions（自动部署workflow）",
+        "Lenis（平滑滚动库，lerp 0.06）",
+        "WebGL（主站效果库）",
+        "TypeScript（项目代码）",
+        "npm（发布@viselora包）",
+        "Docker（voxcpm-api容器）",
+        "Tailscale（组网访问）",
+        "CUDA（GPU驱动验证）",
+        "NVIDIA（驱动修复）",
+        "VoxCPM（语音克隆服务）",
+        "Remotion（视频渲染）",
+        "zsh（终端测试）",
+        "Git（版本控制）",
+        "lego（证书申请）"
+      ],
+      "work": [
+        "【we-media 视频系列】完成《终端与命令行》系列第1–5集制作与三平台发布：第1集（约2分50秒）抖音已公开、B站公开、小红书审核中；第2集（约2分41秒）三平台提交审核中；第3集（2分42秒）三平台提交成功；第4集（2分39秒）三平台提交审核中；第5集（2分44秒）三平台提交审核中。每集均经历多轮抽帧审片（修正光标位置、遮挡、停留时长、标签重叠等）。配音多次遇Edge TTS HTTP 429限流，按axmorf-film规范等待3分钟重试，最终全部完成。第6–8集讲稿已预备，待第5集发布确认后启动。",
+        "【we-media 每日视频】10月26日栏目「AI认知与哲思」《那首打动你的诗，没有人生》成片111.8秒，交付检查通过（响度−16.6 LUFS、真峰值−2.1 dBFS），发布测试34/34通过。三平台提交：小红书审核中、抖音审核中、B站已公开。复盘补采40项D1/D7指标完成。",
+        "【dom-webgl-workspace】主站平滑滚动改造：将直接读window.scrollY改为WebGLScrollRuntime+Lenis（lerp 0.06），修复锚点被Lenis吞掉问题（开启anchors），650个测试通过，提交094d982并创建PR #18。CDN接入：创建私有仓库agenticnoob/zzzxc-infra，含证书续期workflow（lego 5.5.2申请通配符证书）、cdn-domains.json、tencent-cdn-cert.mjs，3个单元测试通过，假密钥验证签名格式。用户已完成4个子域名_cdnauth TXT验证。",
+        "【dom-webgl-workspace 版本发布】发布@viselora/dom-webgl和@viselora/scroll-adapters 0.3.0-alpha.1至npm（带provenance），修复three外部依赖问题，从registry全新安装验证10个断行用例全部一致。",
+        "【mypc NVIDIA驱动修复】根因：9月26日自动更新安装7.0.0-34-generic内核但NVIDIA模块未同步。驱动更新至580.178.04，补齐-34和-38内核模块，RTX 5060识别正常，CUDA读写测试、Docker GPU测试通过。",
+        "【VoxCPM TTS服务】启动voxcpm-api容器（8810端口），/ready返回200，模型在CUDA加载。按用户要求重写使用文档（Tailscale组网、客户端直接调用HTTP）。完成两套克隆声线测试（清爽科技解说8.16秒、短视频强钩子6.56秒），均HTTP 200，PCM解码通过。发现三个产品缺陷：FFmpeg exit 234（Remotion精简版muxer白名单不含s16le）、远程诊断误判（拒绝非loopback地址）、零值参数（默认尝试次数0）。已准备源码补丁（FFmpeg先输出WAV再提取PCM、移除loopback限制、默认次数改1），产品346项测试通过、API 16项通过，但补丁未发布、Mac安装包未更新、API容器未重启。",
+        "【Vercel部署主站】通过GitHub Actions自动发布到Vercel，域名viselora.zzzxc.com绑定验证，PR #16合并后自动发布成功（run 40295536315），215.5 MB静态文件一次上传完成，HTTPS证书有效、HSTS开启，香港节点服务，各页面返回200，带哈希/assets文件immutable缓存，不存在路径404。"
+      ],
+      "resumeHighlight": "主导完成《终端与命令行》20集教学视频系列的制作与三平台发布（第1–5集已交付），并修复VoxCPM语音克隆服务的FFmpeg输出与远程诊断缺陷，补丁验证通过（346项测试）待发布。"
+    },
     {
       "date": "2026-10-25",
       "sessionCount": 6,

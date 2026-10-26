@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "a3044264f7be19c7f2f6469c4733b235efd3f43c",
-    "generatedAt": "2026-10-26T00:07:09.304335+09:00"
+    "revision": "60be1adc181a0133171e3ced767cac08bda03cd9",
+    "generatedAt": "2026-10-27T00:08:58.347941+09:00"
   },
   "skills": [
     {
@@ -325,10 +325,10 @@
       "id": "cloudflare",
       "name": "Cloudflare",
       "category": "cloud",
-      "dayCount": 10,
-      "totalCount": 32,
+      "dayCount": 11,
+      "totalCount": 34,
       "firstSeen": "2026-06-29",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "cloudflared",
@@ -415,10 +415,10 @@
       "id": "cuda",
       "name": "CUDA",
       "category": "runtime",
-      "dayCount": 1,
-      "totalCount": 2,
+      "dayCount": 2,
+      "totalCount": 3,
       "firstSeen": "2026-07-02",
-      "lastSeen": "2026-07-02"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "curl",
@@ -496,10 +496,10 @@
       "id": "docker",
       "name": "Docker",
       "category": "container",
-      "dayCount": 48,
-      "totalCount": 181,
+      "dayCount": 49,
+      "totalCount": 182,
       "firstSeen": "2026-05-24",
-      "lastSeen": "2026-09-23"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "dockercompose",
@@ -559,10 +559,10 @@
       "id": "edgetts",
       "name": "Edge TTS",
       "category": "ai-provider",
-      "dayCount": 8,
-      "totalCount": 14,
+      "dayCount": 9,
+      "totalCount": 17,
       "firstSeen": "2026-08-24",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "editorconfig",
@@ -676,10 +676,10 @@
       "id": "ffmpeg",
       "name": "FFmpeg",
       "category": "tool",
-      "dayCount": 55,
-      "totalCount": 165,
+      "dayCount": 56,
+      "totalCount": 167,
       "firstSeen": "2026-06-26",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "ffprobe",
@@ -730,10 +730,10 @@
       "id": "git",
       "name": "Git",
       "category": "vcs",
-      "dayCount": 109,
-      "totalCount": 500,
+      "dayCount": 110,
+      "totalCount": 501,
       "firstSeen": "2026-05-16",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "github",
@@ -748,10 +748,10 @@
       "id": "githubactions",
       "name": "GitHub Actions",
       "category": "tool",
-      "dayCount": 32,
-      "totalCount": 131,
+      "dayCount": 33,
+      "totalCount": 132,
       "firstSeen": "2026-06-10",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "githubapi",
@@ -1132,13 +1132,22 @@
       "lastSeen": "2026-08-24"
     },
     {
+      "id": "lego",
+      "name": "lego",
+      "category": "tool",
+      "dayCount": 1,
+      "totalCount": 1,
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
       "id": "lenis",
       "name": "Lenis",
       "category": "library",
-      "dayCount": 12,
-      "totalCount": 30,
+      "dayCount": 13,
+      "totalCount": 31,
       "firstSeen": "2026-06-08",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "libreoffice",
@@ -1360,10 +1369,10 @@
       "id": "npm",
       "name": "npm",
       "category": "package-manager",
-      "dayCount": 104,
-      "totalCount": 548,
+      "dayCount": 105,
+      "totalCount": 549,
       "firstSeen": "2026-06-05",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "numpy",
@@ -1373,6 +1382,15 @@
       "totalCount": 1,
       "firstSeen": "2026-07-22",
       "lastSeen": "2026-07-22"
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "category": "hardware",
+      "dayCount": 1,
+      "totalCount": 1,
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "nvidiacontainertoolkit",
@@ -1801,10 +1819,10 @@
       "id": "remotion",
       "name": "Remotion",
       "category": "framework",
-      "dayCount": 82,
-      "totalCount": 601,
+      "dayCount": 83,
+      "totalCount": 602,
       "firstSeen": "2026-05-26",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "repositorydispatch",
@@ -2089,10 +2107,10 @@
       "id": "tailscale",
       "name": "Tailscale",
       "category": "tool",
-      "dayCount": 6,
-      "totalCount": 19,
+      "dayCount": 7,
+      "totalCount": 20,
       "firstSeen": "2026-05-26",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "tailwindcss",
@@ -2138,6 +2156,15 @@
       "totalCount": 1,
       "firstSeen": "2026-09-23",
       "lastSeen": "2026-09-23"
+    },
+    {
+      "id": "tencentcloudcdn",
+      "name": "腾讯云 CDN",
+      "category": "cloud",
+      "dayCount": 1,
+      "totalCount": 1,
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "threejs",
@@ -2197,10 +2224,10 @@
       "id": "typescript",
       "name": "TypeScript",
       "category": "language",
-      "dayCount": 137,
-      "totalCount": 1060,
+      "dayCount": 138,
+      "totalCount": 1061,
       "firstSeen": "2026-05-17",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "ubuntu",
@@ -2269,10 +2296,10 @@
       "id": "vercel",
       "name": "Vercel",
       "category": "cloud",
-      "dayCount": 18,
-      "totalCount": 60,
+      "dayCount": 19,
+      "totalCount": 62,
       "firstSeen": "2026-06-29",
-      "lastSeen": "2026-10-14"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "viseloradomwebgl",
@@ -2323,10 +2350,10 @@
       "id": "voxcpm",
       "name": "VoxCPM",
       "category": "ai-provider",
-      "dayCount": 25,
-      "totalCount": 84,
+      "dayCount": 26,
+      "totalCount": 86,
       "firstSeen": "2026-07-01",
-      "lastSeen": "2026-08-19"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "vue",
@@ -2350,10 +2377,10 @@
       "id": "webgl",
       "name": "WebGL",
       "category": "library",
-      "dayCount": 40,
-      "totalCount": 180,
+      "dayCount": 41,
+      "totalCount": 181,
       "firstSeen": "2026-06-09",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "webp",
@@ -2476,10 +2503,10 @@
       "id": "zsh",
       "name": "Zsh",
       "category": "shell",
-      "dayCount": 9,
-      "totalCount": 20,
+      "dayCount": 10,
+      "totalCount": 21,
       "firstSeen": "2026-08-29",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-26"
     },
     {
       "id": "zustand",
