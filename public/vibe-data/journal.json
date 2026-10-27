@@ -2,10 +2,149 @@
   "schemaVersion": 1,
   "source": {
     "repository": "agenticnoob/vibe-journal-pipeline",
-    "revision": "60be1adc181a0133171e3ced767cac08bda03cd9",
-    "generatedAt": "2026-10-27T00:08:58.347941+09:00"
+    "revision": "aa2d3db3a52904c7abfb5e19f60ca30055d84f78",
+    "generatedAt": "2026-10-28T00:08:34.793238+09:00"
   },
   "entries": [
+    {
+      "date": "2026-10-27",
+      "sessionCount": 12,
+      "turnCount": 235,
+      "skillsTouched": [
+        {
+          "id": "remotion",
+          "name": "Remotion",
+          "category": "framework",
+          "count": 3
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "category": "tool",
+          "count": 2
+        },
+        {
+          "id": "tailscale",
+          "name": "Tailscale",
+          "category": "tool",
+          "count": 1
+        },
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "category": "language",
+          "count": 1
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "category": "runtime",
+          "count": 1
+        },
+        {
+          "id": "npm",
+          "name": "npm",
+          "category": "package-manager",
+          "count": 1
+        },
+        {
+          "id": "cloudflare",
+          "name": "Cloudflare",
+          "category": "cloud",
+          "count": 2
+        },
+        {
+          "id": "tencentcloudcdn",
+          "name": "腾讯云 CDN",
+          "category": "cloud",
+          "count": 2
+        },
+        {
+          "id": "vercel",
+          "name": "Vercel",
+          "category": "cloud",
+          "count": 2
+        },
+        {
+          "id": "letsencrypt",
+          "name": "Let's Encrypt",
+          "category": "tls",
+          "count": 1
+        },
+        {
+          "id": "githubactions",
+          "name": "GitHub Actions",
+          "category": "build-tool",
+          "count": 1
+        },
+        {
+          "id": "edgetts",
+          "name": "Edge TTS",
+          "category": "ai-provider",
+          "count": 2
+        },
+        {
+          "id": "svg",
+          "name": "SVG",
+          "category": "format",
+          "count": 2
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "category": "framework",
+          "count": 1
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "category": "vcs",
+          "count": 1
+        },
+        {
+          "id": "bash",
+          "name": "Bash",
+          "category": "shell",
+          "count": 1
+        }
+      ],
+      "timelineEvent": "完成终端教程20集三平台发布与核验，并交付《AI省的时间，谁拿走了》视频；同时推进AXMORF语音接入修复与腾讯云CDN HTTPS配置。",
+      "tools": [
+        "Remotion（视频渲染框架）",
+        "FFmpeg（音视频处理）",
+        "Tailscale（远程诊断）",
+        "TypeScript（AXMORF源码）",
+        "Python（脚本与数据分析）",
+        "Node.js（运行环境）",
+        "npm（包管理）",
+        "Cloudflare（DNS解析）",
+        "腾讯云 CDN（HTTPS与缓存）",
+        "Vercel（托管与跳转）",
+        "Let's Encrypt（证书签发）",
+        "GitHub Actions（证书续期与CDN探测）",
+        "Edge TTS（配音）",
+        "SVG（矢量动画）",
+        "React（前端组件）",
+        "Git（版本控制）",
+        "Bash（命令行操作）"
+      ],
+      "work": [
+        "【终端教程20集】完成第6—20集成片导出（单集2:20–3:22，总时长约56分钟），三平台共60条作品全部核实公开；抖音、B站合集顺序均为第1—20集，小红书公开合集排序因桌面端入口限制未能核验。交付发布清单、练习包与B站观看链接，关闭全部Ego页面。",
+        "【每日AI视频】《AI省的时间，谁拿走了》完成交付：115.83秒，以NBER研究（w33777）核实选题，三平台提交审核中（小红书、抖音、B站均取得作品编号）。B站上传页超时后沿用原任务补填标签成功。采集39条复盘数据，昨日播放快照样本小（小红书11、抖音8、B站2），暂不调整选题。",
+        "【新合集《AI Agent必备知识》】确认合集名称与目录（网络/支付安排在第05、21集，第01集开头简短提醒），获授权统一短标题、TTS 429自动重试等。第1集《大模型、聊天软件、AI Agent，到底有什么区别？》已交付（8分19.57秒，720p/30帧，三平台审核中）；第2集100句配音恢复完成，但渲染多次触发15分钟超时，已定位为AXMORF单次媒体处理进程超时（bounded-process.ts:97默认900000ms），改为分段导出中间素材再合成，100句配音时序重算全部复用缓存、新旧时间边界差小于0.04秒，30个检查帧通过，最终导出进行中。",
+        "【AXMORF Studio 语音接入修复】定位VoxCPM克隆接口在Ubuntu实测成功但本机上传音频前失败，根因是音频格式与Remotion自带FFmpeg不兼容（需转s16le裸PCM但精简版FFmpeg未启用该输出，退出码234），修复应改源码仓库语音接入层，不直接改node_modules；另修复Tailscale远程诊断误报（诊断代码只允许本机地址）。修复前继续用Edge免费TTS作默认。",
+        "【AXMORF 视频风格优化】A/B测试对比axmorph（原创SVG动画）与Remotion（扁平信息图）讲解片，发现axmorph短板：字幕太小（约30–34px）、文字预算限制、镜头只有推拉。提出四项优化建议（镜头语言、字幕、静音可懂、保留长处方），分支9个commit不改变讲解片默认行为，测试通过可合并。",
+        "【腾讯云 CDN HTTPS】完成4个域名（viselora、resume、blog、www）的HTTPS配置：签发*.zzzxc.com通配符证书（到期2027-01-25），部署到4个域名，配置每域名每月100万次HTTPS封顶、每IP每秒100次限频与自动防盗刷，回读确认保护生效后开启HTTPS。四个域名全部发布完成，公开站点返回200；但指定CDN节点检查仍被提前关闭连接，回源可用性未标记通过，继续排查。DNS未切换，线上仍由Vercel服务。",
+        "【AXMORF 工作空间配置】添加并保存合集「AI Agent必备知识」，空格和大小写已核对，其他配置未变。"
+      ],
+      "resumeHighlight": "主导完成20集终端教程视频的三平台发布与核验（60条作品全部公开），并定位AXMORF渲染超时根因（单次媒体处理进程15分钟限制），通过分段导出与配音时序重算（新旧边界差<0.04秒）成功推进成片产出。"
+    },
     {
       "date": "2026-10-26",
       "sessionCount": 10,
